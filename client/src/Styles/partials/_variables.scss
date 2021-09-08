@@ -1,0 +1,30 @@
+//BreakPoints
+$tablet-breakpoint: 1280px;
+$desktop-breakpoint: 767px;
+
+//Colors Platetter
+//primary
+$instock-black: #13182C; // Global text color
+$instock-indigo: #2E66E5; //Interactive elements 
+$white: #ffffff; //Global white color
+//secondary
+$slate: #5c667E; // Table column headers & placeholder text
+$cloud: #BDC5D5; //outlines dividers, borders, tablet sorting icon
+//background colors
+$graphite: #232940; //top navigation header-background
+$light-grey: #F7F8F9; //page backgorund, tablet column header bkgd, CTA bkgd
+//supporting colors
+$green: #158463; //in-stock label
+$red: #c94515; //out of stock label, error states, & delete icon
+
+//padding 
+$pad80: 80px; 
+$pad64: 64px;
+$pad56: 56px;
+$pad48: 48px;
+$pad40: 40px;
+$pad32: 32px;
+$pad24: 24px;
+$pad16: 16px;
+$pad8: 8px;
+$pad4: 4px;
