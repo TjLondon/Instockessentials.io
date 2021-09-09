@@ -71,7 +71,8 @@ function addWarehouse({ history }) {
   return (
     <div className="add-warehouse">
       <h1 className="add-warehouse__title">Add New Warehouse</h1>
-      <h2 className="add-warehouse__subtitle">Warehouse Details</h2>
+      {/* <div className="add-warehouse__box"> */}
+      
       <Formik
         initialValues={{
           warehouse_name: "",
@@ -110,8 +111,11 @@ function addWarehouse({ history }) {
           console.log(values);
         }}
       >
-        {({ errors, touched, isValidating }) => (
+        {({ errors, touched}) => (
+          
           <Form className="add-warehouse__form">
+            <div className="add-warehouse__box">
+            <h2 className="add-warehouse__subtitle">Warehouse Details</h2>
             <label className="add-warehouse__form--label" htmlFor="">
               Warehouse name
             </label>
@@ -124,8 +128,8 @@ function addWarehouse({ history }) {
               <div className="add-warehouse__form--error">
                 <img
                   className="error-icon"
-                  src="../../../../server/Assets/Icons/error-24px.svg"
-                  alt=""
+                  src="http://localhost:8080/server/Assets/Icons/error-24px.svg"
+                  alt="red error icon"
                 />
                 {errors.warehouse_name}
               </div>
@@ -163,6 +167,9 @@ function addWarehouse({ history }) {
             {errors.country && touched.country && (
               <div className="add-warehouse__form--error">{errors.country}</div>
             )}
+            </div>
+            <div className="add-warehouse__box">
+            <h2 className="add-warehouse__subtitle">Contact Details</h2>
             <label className="add-warehouse__form--label" htmlFor="">
               Contact Name{" "}
             </label>
@@ -207,15 +214,16 @@ function addWarehouse({ history }) {
               validate={validateEmail}
             />
             {errors.email && touched.email && <div>{errors.email}</div>}
+            </div>
+          </Form>
+        )}
+      </Formik>
             <div className="add-warehouse__form--buttonbox">
               <button className="add-warehouse__form--cancel">Cancel</button>
               <button className="add-warehouse__form--button" type="submit">
                 + Add Warehouse
               </button>
             </div>
-          </Form>
-        )}
-      </Formik>
     </div>
   );
 }

@@ -12,18 +12,14 @@ const readWarehouseFile = () => {
   };
 
 router.post("/add", (req, res) => {
+    console.log(req.body);
     const  addWarehouse = {
         id: uuidv4(),
         name: req.body.warehouse_name,
         address: req.body.street,
         city: req.body.city,
         country: req.body.country,
-        contact: {
-          name: req.body.contact,
-          position: req.body.position,
-          phone: req.body.phone,
-          email: req.body.email,
-    },
+        contact: req.body.contact,
 };
 
 const newWarehouseData = readWarehouseFile();
