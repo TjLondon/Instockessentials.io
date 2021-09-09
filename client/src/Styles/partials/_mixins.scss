@@ -13,73 +13,73 @@
     }
 }
 //mobile
-@mixin mh1header{
+@mixin mobile-h1-pageheader{
     font-size: $m-h1-hr-font;
     line-height: $m-h1-hr-lineh;
     font-weight: 600;
 }
-@mixin mh2subheader{
+@mixin mobile-h2-subheader{
     font-size: $m-h2-subhr-font;
     line-height: $m-h2-subhr-lineh;
     font-weight: 600;
 }
-@mixin mh3lablinkbtns{
+@mixin mobile-h3-labels-links-btns{
     font-size: $m-h3-lablinkbtns-font;
     line-height: $m-h3-lablinkbtns-lineh;
     font-weight: 600;
 }
-@mixin mh4tablehr{
+@mixin mobile-h4-table-header{
     font-size: $m-h4-tablehr-font;
     line-height: $m-h4-tablehr-lineh;
     font-weight: 400;
 }
-@mixin mp1lg{
+@mixin mobile-large-font{
     font-size: $m-p1-bodylg-font;
     line-height: $m-p1-bodylg-lineh;
     font-weight: 400;
 }
-@mixin mp2med{
+@mixin mobile-medium-font{
     font-size: $m-p2-bodymed-font;
     line-height: $m-p2-bodymed-lineh;
     font-weight: 400;
 }
-@mixin mp3sm{
+@mixin mobile-small-font{
     font-size: $m-p3-bodysm-font;
     line-height: $m-p3-bodysm-lineh;
     font-weight: 400;
 }
 //desktop
-@mixin dkh1header{
+@mixin desktop-h1-pageheader{
     font-size: $dk-h1-hr-font;
     line-height: $dk-h1-hr-lineh;
     font-weight: 600;
 }
-@mixin dkh2subheader{
+@mixin desktop-h2-subheader{
     font-size: $dk-h2-subhr-font;
     line-height: $dk-h2-subhr-lineh;
     font-weight: 600;
 }
-@mixin dkh3lablinkbtns{
+@mixin desktop-h3-labels-links-btns{
     font-size: $dk-h3-lablinkbtns-font;
     line-height: $dk-h3-lablinkbtns-lineh;
     font-weight: 400;
 }
-@mixin dkh4tablehr{
+@mixin desktop-h4-table-header{
     font-size: $dk-h4-tablehr-font;
     line-height: $dk-h4-tablehr-lineh;
     font-weight: 400;
 }
-@mixin dkp1lg{
+@mixin desktop-large-font{
     font-size: $dk-p1-bodylg-font;
     line-height: $dk-p1-bodylg-lineh;
     font-weight: 400;
 }
-@mixin dkp2med{
+@mixin desktop-medium-font{
     font-size: $dk-p2-bodymed-font;
     line-height: $dk-p2-bodymed-lineh;
     font-weight: 400;
 }
-@mixin dkp3sm{
+@mixin desktop-small-font{
     font-size: $dk-p3-bodysm-font;
     line-height: $dk-p3-bodysm-lineh;
     font-weight: 400;
