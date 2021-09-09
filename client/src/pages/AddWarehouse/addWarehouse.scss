@@ -7,6 +7,10 @@ body {
     color: $instock-black;
     background-color: $light-grey;
 }
+.error-icon {
+  height: 24px;
+  width: 24px;
+}
 .add-warehouse {
   @include resets;
   display: flex;
@@ -43,6 +47,7 @@ body {
     }
     &--cancel {
       font-family: "Titillium Web";
+      border-style: solid;
       border-radius: 20px;
       border-color: $cloud;
       padding: 0.5rem;
@@ -51,6 +56,7 @@ body {
       background-color: $white;
     }
     &--button {
+      border: none;
       font-family: "Titillium Web";
       border-radius: 20px;
       padding: 0.5rem;
@@ -61,6 +67,8 @@ body {
     }
     &--error {
       color: $red;
+      margin-left: 1rem;
+      margin-top: -.5rem;
     }
   }
 }
