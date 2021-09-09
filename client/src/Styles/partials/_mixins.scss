@@ -1,6 +1,7 @@
 @import './variables'; 
+@import './typography';
 
-
+//breakpoints
 @mixin tablet {
     @media (min-width: $tablet-breakpoint) {
         @content;
@@ -15,57 +16,99 @@
 @mixin mh1header{
     font-size: $m-h1-hr-font;
     line-height: $m-h1-hr-lineh;
+    font-weight: 600;
 }
 @mixin mh2subheader{
     font-size: $m-h2-subhr-font;
     line-height: $m-h2-subhr-lineh;
+    font-weight: 600;
 }
 @mixin mh3lablinkbtns{
     font-size: $m-h3-lablinkbtns-font;
     line-height: $m-h3-lablinkbtns-lineh;
+    font-weight: 600;
 }
 @mixin mh4tablehr{
     font-size: $m-h4-tablehr-font;
     line-height: $m-h4-tablehr-lineh;
+    font-weight: 400;
 }
 @mixin mp1lg{
     font-size: $m-p1-bodylg-font;
     line-height: $m-p1-bodylg-lineh;
+    font-weight: 400;
 }
 @mixin mp2med{
     font-size: $m-p2-bodymed-font;
     line-height: $m-p2-bodymed-lineh;
+    font-weight: 400;
 }
 @mixin mp3sm{
     font-size: $m-p3-bodysm-font;
     line-height: $m-p3-bodysm-lineh;
+    font-weight: 400;
 }
 //desktop
 @mixin dkh1header{
     font-size: $dk-h1-hr-font;
     line-height: $dk-h1-hr-lineh;
+    font-weight: 600;
 }
 @mixin dkh2subheader{
     font-size: $dk-h2-subhr-font;
     line-height: $dk-h2-subhr-lineh;
+    font-weight: 600;
 }
 @mixin dkh3lablinkbtns{
     font-size: $dk-h3-lablinkbtns-font;
     line-height: $dk-h3-lablinkbtns-lineh;
+    font-weight: 400;
 }
 @mixin dkh4tablehr{
     font-size: $dk-h4-tablehr-font;
     line-height: $dk-h4-tablehr-lineh;
+    font-weight: 400;
 }
 @mixin dkp1lg{
     font-size: $dk-p1-bodylg-font;
     line-height: $dk-p1-bodylg-lineh;
+    font-weight: 400;
 }
 @mixin dkp2med{
     font-size: $dk-p2-bodymed-font;
     line-height: $dk-p2-bodymed-lineh;
+    font-weight: 400;
 }
 @mixin dkp3sm{
     font-size: $dk-p3-bodysm-font;
     line-height: $dk-p3-bodysm-lineh;
+    font-weight: 400;
+}
+//colors: 
+@mixin globaltxt {
+    color: $instock-black;
+}
+@mixin interactive{
+    color: $instock-indigo;
+}
+@mixin globalwhite {
+    color: $white;
+}
+@mixin tablehr-placeholder {
+    color: $slate;
+}
+@mixin dividers-borders {
+    color: $cloud;
+}
+@mixin bkgdnavigationheader {
+    color: $graphite;
+}
+@mixin pagebkdg {
+    color: $light-grey;
+}
+@mixin instock {
+    color: $green;
+}
+@mixin outofstock {
+    color: $red;
 }

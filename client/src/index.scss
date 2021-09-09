@@ -1,0 +1,18 @@
+@import './Styles/partials/variables';
+@import './Styles/partials/typography';
+@import './Styles/partials/mixins';
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Titillium Web';
+    margin: 0;
+    color: $instock-black;
+    background-color: $light-grey;
+}
+a, a:hover, a:active {
+    text-decoration: none;
+    color: inherit;
+}
