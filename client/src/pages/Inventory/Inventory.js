@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class inventory extends Component {
+class Inventory extends Component {
     render() {
         return (
             <div>
@@ -9,4 +9,4 @@ class inventory extends Component {
         )
     }
 }
-export default inventory
+export default Inventory
