@@ -11,3 +11,61 @@
         @content;
     }
 }
+//mobile
+@mixin mh1header{
+    font-size: $m-h1-hr-font;
+    line-height: $m-h1-hr-lineh;
+}
+@mixin mh2subheader{
+    font-size: $m-h2-subhr-font;
+    line-height: $m-h2-subhr-lineh;
+}
+@mixin mh3lablinkbtns{
+    font-size: $m-h3-lablinkbtns-font;
+    line-height: $m-h3-lablinkbtns-lineh;
+}
+@mixin mh4tablehr{
+    font-size: $m-h4-tablehr-font;
+    line-height: $m-h4-tablehr-lineh;
+}
+@mixin mp1lg{
+    font-size: $m-p1-bodylg-font;
+    line-height: $m-p1-bodylg-lineh;
+}
+@mixin mp2med{
+    font-size: $m-p2-bodymed-font;
+    line-height: $m-p2-bodymed-lineh;
+}
+@mixin mp3sm{
+    font-size: $m-p3-bodysm-font;
+    line-height: $m-p3-bodysm-lineh;
+}
+//desktop
+@mixin dkh1header{
+    font-size: $dk-h1-hr-font;
+    line-height: $dk-h1-hr-lineh;
+}
+@mixin dkh2subheader{
+    font-size: $dk-h2-subhr-font;
+    line-height: $dk-h2-subhr-lineh;
+}
+@mixin dkh3lablinkbtns{
+    font-size: $dk-h3-lablinkbtns-font;
+    line-height: $dk-h3-lablinkbtns-lineh;
+}
+@mixin dkh4tablehr{
+    font-size: $dk-h4-tablehr-font;
+    line-height: $dk-h4-tablehr-lineh;
+}
+@mixin dkp1lg{
+    font-size: $dk-p1-bodylg-font;
+    line-height: $dk-p1-bodylg-lineh;
+}
+@mixin dkp2med{
+    font-size: $dk-p2-bodymed-font;
+    line-height: $dk-p2-bodymed-lineh;
+}
+@mixin dkp3sm{
+    font-size: $dk-p3-bodysm-font;
+    line-height: $dk-p3-bodysm-lineh;
+}
