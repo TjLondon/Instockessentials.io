@@ -59,5 +59,8 @@ body {
       background-color: $instock-indigo;
       color: $white;
     }
+    &--error {
+      color: $red;
+    }
   }
 }

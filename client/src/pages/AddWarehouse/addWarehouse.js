@@ -24,6 +24,63 @@ class addWarehouse extends Component {
     });
   };
 
+  isWarehouseValid = () => {
+    // TO DO: Check if the password is too short
+    if (!this.state.warehouse_name) {
+      return false;
+    }
+    return true;
+  };
+  isStreetValid = () => {
+    // TO DO: Check if the password is too short
+    if (!this.state.street) {
+      return false;
+    }
+    return true;
+  };
+  isCityValid = () => {
+    // TO DO: Check if the password is too short
+    if (!this.state.city) {
+      return false;
+    }
+    return true;
+  };
+  isCountryValid = () => {
+    // TO DO: Check if the password is too short
+    if (!this.state.country) {
+      return false;
+    }
+    return true;
+  };
+  isContactValid = () => {
+    // TO DO: Check if the password is too short
+    if (!this.state.country) {
+      return false;
+    }
+    return true;
+  };
+  isPositionValid = () => {
+    // TO DO: Check if the password is too short
+    if (!this.state.country) {
+      return false;
+    }
+    return true;
+  };
+  isPhoneValid = () => {
+    // TO DO: Check if the password is too short
+    if (!this.state.country) {
+      return false;
+    }
+    return true;
+  };
+  isEmailValid = () => {
+    // TO DO: Check if the password is too short
+    if (!this.state.country) {
+      return false;
+    }
+    return true;
+  };
+
   isFormValid = () => {
     // TO DO: Check if the fields are all filled
     if (
@@ -48,12 +105,37 @@ class addWarehouse extends Component {
       console.log(event.target.value);
       // This is where we would make an axios request
       // to our backend to add the user to our database.
-      alert("Signed up successfully");
+      alert("New Warehouse Added!");
     } else {
-      alert("Failed to sign up, you have errors in your form");
+      alert("Errors in your form. Please try again.");
     }
   };
   render() {
+    let errorMessage = "";
+    if (!this.isWarehouseValid()) {
+      errorMessage = "field required";
+    }
+    if (!this.isCityValid()) {
+      errorMessage = "field required";
+    }
+    if (!this.isStreetValid()) {
+      errorMessage = "field required";
+    }
+    if (!this.isCountryValid()) {
+      errorMessage = "field required";
+    }
+    if (!this.isPositionValid()) {
+      errorMessage = "field required";
+    }
+    if (!this.isContactValid()) {
+      errorMessage = "field required";
+    }
+    if (!this.isPhoneValid()) {
+      errorMessage = "field required";
+    }
+    if (!this.isEmailValid()) {
+      errorMessage = "field required";
+    }
     return (
       <div className="add-warehouse">
         <h1 className="add-warehouse__title">Add New Warehouse</h1>
@@ -69,6 +151,7 @@ class addWarehouse extends Component {
             placeholder="Warehouse Name"
             onChange={this.handleChange}
           />
+          <p className="add-warehouse__form--error">{errorMessage}</p>
           <label className="add-warehouse__form--label" htmlFor="">
             Street Address
           </label>
@@ -79,6 +162,7 @@ class addWarehouse extends Component {
             placeholder="Street Address"
             onChange={this.handleChange}
           />
+          <p className="add-warehouse__form--error">{errorMessage}</p>
           <label className="add-warehouse__form--label" htmlFor="">
             City
           </label>
@@ -89,6 +173,7 @@ class addWarehouse extends Component {
             placeholder="City"
             onChange={this.handleChange}
           />
+          <p className="add-warehouse__form--error">{errorMessage}</p>
           <label className="add-warehouse__form--label" htmlFor="">
             Country
           </label>
@@ -99,6 +184,7 @@ class addWarehouse extends Component {
             placeholder="Country"
             onChange={this.handleChange}
           />
+          <p className="add-warehouse__form--error">{errorMessage}</p>
           <h2 className="add-warehouse__subtitle">Contact Details</h2>
           <label className="add-warehouse__form--label" htmlFor="">
             Contact Name
@@ -110,6 +196,7 @@ class addWarehouse extends Component {
             placeholder="Contact name"
             onChange={this.handleChange}
           />
+          <p className="add-warehouse__form--error">{errorMessage}</p>
           <label className="add-warehouse__form--label" htmlFor="">
             Position
           </label>
@@ -120,6 +207,7 @@ class addWarehouse extends Component {
             placeholder="Position"
             onChange={this.handleChange}
           />
+          <p className="add-warehouse__form--error">{errorMessage}</p>
           <label className="add-warehouse__form--label" htmlFor="">
             Phone Number
           </label>
@@ -130,6 +218,7 @@ class addWarehouse extends Component {
             placeholder="Phone number"
             onChange={this.handleChange}
           />
+          <p className="add-warehouse__form--error">{errorMessage}</p>
           <label className="add-warehouse__form--label" htmlFor="">
             Email
           </label>
@@ -140,6 +229,7 @@ class addWarehouse extends Component {
             placeholder="Email"
             onChange={this.handleChange}
           />
+          <p className="add-warehouse__form--error">{errorMessage}</p>
           <div className="add-warehouse__form--buttonbox">
             <button className="add-warehouse__form--cancel">Cancel</button>
             <button className="add-warehouse__form--button">
