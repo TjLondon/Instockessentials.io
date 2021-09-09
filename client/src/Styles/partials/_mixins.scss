@@ -1,5 +1,18 @@
 @import './variables'; 
-
+@mixin resets {
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+    
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  }
 
 @mixin tablet {
     @media (min-width: $tablet-breakpoint) {

@@ -1,0 +1,57 @@
+@import "../../Styles/partials/mixins";
+@import "../../Styles/partials/variables";
+@import "../../Styles//partials/typography";
+
+.add-warehouse {
+  @include resets;
+  display: flex;
+  flex-direction: column;
+  background-color: $light-grey;
+  margin: 1rem;
+  &__title {
+    font-family: "Titillium Web";
+    margin: 0 0 0 1rem;
+  }
+  &__subtitle {
+    font-family: "Titillium Web";
+    margin-left: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid $cloud;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    &--label {
+      font-family: "Titillium Web";
+      margin: 1rem 0 0.25rem 1rem;
+    }
+    &--input {
+      border-radius: 20px;
+      border-color: $cloud;
+      padding: 1rem;
+      margin: 0 1rem 1rem 1rem;
+    }
+    &--buttonbox {
+      display: flex;
+      justify-content: center;
+    }
+    &--cancel {
+      font-family: "Titillium Web";
+      border-radius: 20px;
+      border-color: $cloud;
+      padding: 0.5rem;
+      width: 50%;
+      margin: 1rem;
+      background-color: $white;
+    }
+    &--button {
+      font-family: "Titillium Web";
+      border-radius: 20px;
+      padding: 0.5rem;
+      width: 50%;
+      margin: 1rem;
+      background-color: $instock-indigo;
+      color: $white;
+    }
+  }
+}
