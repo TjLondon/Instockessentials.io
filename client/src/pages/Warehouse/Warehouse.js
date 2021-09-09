@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class warehouse extends Component {
+class Warehouse extends Component {
     render() {
         return (
             <div>
@@ -9,4 +9,4 @@ class warehouse extends Component {
         )
     }
 }
-export default warehouse
+export default Warehouse
