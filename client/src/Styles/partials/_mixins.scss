@@ -14,13 +14,13 @@
 }
 //mobile
 @mixin mobile-h1-pageheader{
-    font-size: $m-h1-hr-font;
-    line-height: $m-h1-hr-lineh;
+    font-size: $mobile-h1-header-font;
+    line-height: $mobile-h1-header-lineh;
     font-weight: 600;
 }
 @mixin mobile-h2-subheader{
-    font-size: $m-h2-subhr-font;
-    line-height: $m-h2-subhr-lineh;
+    font-size: $mobile-h2-subheader-font;
+    line-height: $mobile-h2-subheader-lineh;
     font-weight: 600;
 }
 @mixin mobile-h3-labels-links-btns{
@@ -29,59 +29,59 @@
     font-weight: 600;
 }
 @mixin mobile-h4-table-header{
-    font-size: $m-h4-tablehr-font;
-    line-height: $m-h4-tablehr-lineh;
+    font-size: $mobile-h4-tableheader-font;
+    line-height: $mobile-h4-tableheader-lineh;
     font-weight: 400;
 }
 @mixin mobile-large-font{
-    font-size: $m-p1-bodylg-font;
-    line-height: $m-p1-bodylg-lineh;
+    font-size: $mobile-p1-bodylarge-font;
+    line-height: $mobile-p1-bodylarge-lineh;
     font-weight: 400;
 }
 @mixin mobile-medium-font{
-    font-size: $m-p2-bodymed-font;
-    line-height: $m-p2-bodymed-lineh;
+    font-size: $mobile-p2-bodymedium-font;
+    line-height: $mobile-p2-bodymedium-lineh;
     font-weight: 400;
 }
 @mixin mobile-small-font{
-    font-size: $m-p3-bodysm-font;
-    line-height: $m-p3-bodysm-lineh;
+    font-size: $mobile-p3-bodysmall-font;
+    line-height: $mobile-p3-bodysmall-lineh;
     font-weight: 400;
 }
 //desktop
 @mixin desktop-h1-pageheader{
-    font-size: $dk-h1-hr-font;
-    line-height: $dk-h1-hr-lineh;
+    font-size: $desktop-h1-header-font;
+    line-height: $desktop-h1-header-lineh;
     font-weight: 600;
 }
 @mixin desktop-h2-subheader{
-    font-size: $dk-h2-subhr-font;
-    line-height: $dk-h2-subhr-lineh;
+    font-size: $desktop-h2-subheader-font;
+    line-height: $desktop-h2-subheader-lineh;
     font-weight: 600;
 }
 @mixin desktop-h3-labels-links-btns{
-    font-size: $dk-h3-lablinkbtns-font;
-    line-height: $dk-h3-lablinkbtns-lineh;
+    font-size: $desktop-h3-lablinkbtns-font;
+    line-height: $desktop-h3-lablinkbtns-lineh;
     font-weight: 400;
 }
 @mixin desktop-h4-table-header{
-    font-size: $dk-h4-tablehr-font;
-    line-height: $dk-h4-tablehr-lineh;
+    font-size: $desktop-h4-tableheader-font;
+    line-height: $desktop-h4-tableheader-lineh;
     font-weight: 400;
 }
 @mixin desktop-large-font{
-    font-size: $dk-p1-bodylg-font;
-    line-height: $dk-p1-bodylg-lineh;
+    font-size: $desktop-p1-bodylarge-font;
+    line-height: $desktop-p1-bodylarge-lineh;
     font-weight: 400;
 }
 @mixin desktop-medium-font{
-    font-size: $dk-p2-bodymed-font;
-    line-height: $dk-p2-bodymed-lineh;
+    font-size: $desktop-p2-bodymedium-font;
+    line-height: $desktop-p2-bodymedium-lineh;
     font-weight: 400;
 }
 @mixin desktop-small-font{
-    font-size: $dk-p3-bodysm-font;
-    line-height: $dk-p3-bodysm-lineh;
+    font-size: $desktop-p3-bodysmall-font;
+    line-height: $desktop-p3-bodysmall-lineh;
     font-weight: 400;
 }
 //colors: 
@@ -102,9 +102,6 @@
 }
 @mixin bkgdnavigationheader {
     color: $graphite;
-}
-@mixin pagebkdg {
-    color: $light-grey;
 }
 @mixin instock {
     color: $green;
