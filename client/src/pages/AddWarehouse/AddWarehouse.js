@@ -75,7 +75,7 @@ function validatePhone(value) {
 function AddWarehouse({ history }) {
   return (
     <div className="add-warehouse">
-      <h1 className="add-warehouse__title"><img src="http://localhost:8080/server/Assets/Icons/arrow_back-24px.svg" alt="arrow"/>Add New Warehouse</h1>
+      <h1 className="add-warehouse__title"><img src="" alt="arrow"/>Add New Warehouse</h1>
       {/* <div className="add-warehouse__box"> */}
       
       <Formik
@@ -119,6 +119,7 @@ function AddWarehouse({ history }) {
         {({ errors, touched}) => (
           
           <Form className="add-warehouse__form">
+            <div className="add-warehouse__form--box">
             <div className="add-warehouse__box left-box">
             <h2 className="add-warehouse__subtitle">Warehouse Details</h2>
             <label className="add-warehouse__form--label" htmlFor="">
@@ -221,15 +222,16 @@ function AddWarehouse({ history }) {
             />
             {errors.email && touched.email && <div className="add-warehouse__form--error">{errors.email}</div>}
             </div>
-          </Form>
-        )}
-      </Formik>
+            </div>
             <div className="add-warehouse__form--buttonbox">
               <button className="add-warehouse__form--cancel">Cancel</button>
               <button className="add-warehouse__form--button" type="submit">
                 + Add Warehouse
               </button>
             </div>
+          </Form>
+        )}
+        </Formik>
     </div>
   );
 }

@@ -51,9 +51,13 @@ body {
     display: flex;
     flex-direction: column;
     @include tablet {
+      // display: flex;
+      // flex-direction: row;
+      border-right: 1px solid $cloud;
+    }
+    &--box {
       display: flex;
       flex-direction: row;
-      border-right: 1px solid $cloud;
     }
     &--label {
       font-family: "Titillium Web";
