@@ -19,6 +19,8 @@ body {
   background-color: $white;
   box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
   border-radius: 3px;
+  position: relative;
+  top: -4.25rem;
   &__title {
     font-family: "Titillium Web";
     margin: 0 0 0 1rem;

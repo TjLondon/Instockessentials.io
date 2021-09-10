@@ -68,9 +68,12 @@ function validatePhone(value) {
   }
   return error;
 }
-function AddWarehouse({ history }) {
+function AddWarehouse({ history, component }) {
   return (
+    <>
+    {component}
     <div className="add-warehouse">
+      
       <h1 className="add-warehouse__title"><img src="" alt="arrow"/>Add New Warehouse</h1>
       {/* <div className="add-warehouse__box"> */}
       
@@ -229,6 +232,7 @@ function AddWarehouse({ history }) {
         )}
         </Formik>
     </div>
+    </>
   );
 }
 
