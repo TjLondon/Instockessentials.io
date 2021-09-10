@@ -12,7 +12,8 @@ const readWarehouseFile = () => {
   };
 
 router.post("/add", (req, res) => {
-    console.log(req.body);
+    if (!req.body.warehouse_name)
+    res.status(200).send("no info in request")
     const  addWarehouse = {
         id: uuidv4(),
         name: req.body.warehouse_name,
