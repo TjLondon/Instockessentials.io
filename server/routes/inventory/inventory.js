@@ -13,7 +13,7 @@ const readInventoryData = () => {
 };
 
 //axios get
-router.get('/:id/inventory', (_req, res) => {
+router.get('/', (_req, res) => {
     try {
         const parsedInventory = readInventoryData();
         return res.status(200).json(parsedInventory)
