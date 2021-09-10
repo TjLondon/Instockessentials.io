@@ -20,14 +20,20 @@ body {
   box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
   border-radius: 3px;
   position: relative;
-  top: -4.25rem;
+  top: -4.5rem;
+  @include tablet {
+    margin: 2rem;
+    // top: -5.75rem;
+  }
+  @include desktop {
+    margin: 2rem 8.125rem 2rem 8.125rem;
+  }
   &__title {
     font-family: "Titillium Web";
-    margin: 0 0 0 1rem;
+    margin: 2rem 0 0 1rem;
     @include tablet {
       border-bottom: 1px solid $cloud;
-      margin-bottom: 2rem;
-      margin-left: 2rem;
+      margin: 2rem 0 2rem 2rem;
       padding-bottom: 1rem;
     }
   }
@@ -59,7 +65,10 @@ body {
     }
     &--box {
       display: flex;
+      flex-direction: column;
+      @include tablet {
       flex-direction: row;
+      }
     }
     &--label {
       font-family: "Titillium Web";
@@ -107,7 +116,7 @@ body {
         color: $instock-indigo;
       }
       @include tablet {
-        width: 15%;
+        width: 5%;
       }
     }
     &--button {
@@ -124,12 +133,17 @@ body {
       }
       @include tablet {
         width: 15%;
+        margin-right: 0;
       }
     }
     &--error {
       color: $red;
       margin-left: 1rem;
       margin-top: -0.5rem;
+      @include tablet {
+        margin-left: 2rem;
+      }
+     
     }
   }
 }
@@ -142,6 +156,11 @@ body {
   border-radius: 20px;
   padding: 1rem;
   margin: 0 1rem 1rem 1rem;
+  &:focus {
+    border-color: $instock-indigo;
+    border-radius: 20px;
+    outline: none;
+  }
   @include tablet {
     margin: 0 2rem 1rem 2rem;
   }

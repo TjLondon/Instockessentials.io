@@ -7,8 +7,10 @@ import { Formik, Form, Field } from "formik";
 function validateEmail(value) {
   let error;
   if (!value) {
-    error = "required";
+    error = "this field is required";
+    
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
+    
     error = "Invalid email address";
   }
   return error;
@@ -17,8 +19,8 @@ function validateEmail(value) {
 function validateWarehouse(value) {
   let error;
   if (!value) {
-    error = "required";
-    document.getElementById('red-border').className = ('error-border');
+    error = "this field is required";
+    
     
   }
   return error;
@@ -26,45 +28,52 @@ function validateWarehouse(value) {
 function validateStreet(value) {
   let error;
   if (!value) {
-    error = "required";
+    error = "this field is required";
+    
   }
   return error;
 }
 function validateCity(value) {
   let error;
   if (!value) {
-    error = "required";
+    error = "this field is required";
+    
   }
   return error;
 }
 function validateCountry(value) {
   let error;
   if (!value) {
-    error = "required";
+    error = "this field is required";
+    
   }
   return error;
 }
 function validateContact(value) {
   let error;
   if (!value) {
-    error = "required";
+    error = "this field is required";
+    
   }
   return error;
 }
 function validatePosition(value) {
   let error;
   if (!value) {
-    error = "required";
+    error = "this field is required";
+    
   }
   return error;
 }
 function validatePhone(value) {
   let error;
   if (!value) {
-    error = "required";
+    error = "this field is required";
+    
   }
   else if (!/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/i.test(value)){
     error = "input valid phone number"
+    
   }
   return error;
 }
@@ -112,7 +121,7 @@ function AddWarehouse({ history, component }) {
               console.log(error);
             });
 
-          console.log(values);
+         
         }}
       >
         {({ errors, touched}) => (
@@ -125,12 +134,14 @@ function AddWarehouse({ history, component }) {
               Warehouse name
             </label>
             <Field
-              className="add-warehouse__form--input"
-              id="red-border"
+              className="add-warehouse__form--input red-border"
+              id="error-border"
               name="warehouse_name"
+              placeholder="Warehouse Name"
               validate={validateWarehouse}
             />
             {errors.warehouse_name && touched.warehouse_name && (
+              document.getElementById('error-border').className = ('error-border'),
               <div className="add-warehouse__form--error">
                 <img
                   className="error-icon"
@@ -145,10 +156,13 @@ function AddWarehouse({ history, component }) {
             </label>
             <Field
               className="add-warehouse__form--input"
+              id="error-border__street"
               name="street"
+              placeholder="Street Address"
               validate={validateStreet}
             />
             {errors.street && touched.street && (
+              document.getElementById('error-border__street').className = ('error-border'),
               <div className="add-warehouse__form--error">{errors.street}</div>
             )}
             <label className="add-warehouse__form--label" htmlFor="">
@@ -156,10 +170,13 @@ function AddWarehouse({ history, component }) {
             </label>
             <Field
               className="add-warehouse__form--input"
+              id="red-border__city"
               name="city"
+              placeholder="City"
               validate={validateCity}
             />
             {errors.city && touched.city && (
+              document.getElementById('red-border__city').className = ('error-border'),
               <div className="add-warehouse__form--error">{errors.city}</div>
             )}
             <label className="add-warehouse__form--label" htmlFor="">
@@ -168,9 +185,12 @@ function AddWarehouse({ history, component }) {
             <Field
               className="add-warehouse__form--input"
               name="country"
+              id="red-border__country"
+              placeholder="Country"
               validate={validateCountry}
             />
             {errors.country && touched.country && (
+              document.getElementById('red-border__country').className = ('error-border'),
               <div className="add-warehouse__form--error">{errors.country}</div>
             )}
             </div>
@@ -182,9 +202,12 @@ function AddWarehouse({ history, component }) {
             <Field
               className="add-warehouse__form--input"
               name="contact"
+              id="red-border__contact"
+              placeholder="Contact Name"
               validate={validateContact}
             />
             {errors.contact && touched.contact && (
+              document.getElementById('red-border__contact').className = ('error-border'),
               <div className="add-warehouse__form--error">{errors.contact}</div>
             )}
             <label className="add-warehouse__form--label" htmlFor="">
@@ -193,9 +216,12 @@ function AddWarehouse({ history, component }) {
             <Field
               className="add-warehouse__form--input"
               name="position"
+              placeholder="Position"
+              id="red-border__position"
               validate={validatePosition}
             />
             {errors.position && touched.position && (
+              document.getElementById('red-border__position').className = ('error-border'),
               <div className="add-warehouse__form--error">
                 {errors.position}
               </div>
@@ -206,9 +232,12 @@ function AddWarehouse({ history, component }) {
             <Field
               className="add-warehouse__form--input"
               name="phone"
+              placeholder="Phone Number"
+              id="red-border__phone"
               validate={validatePhone}
             />
             {errors.phone && touched.phone && (
+              document.getElementById('red-border__phone').className = ('error-border'),
               <div className="add-warehouse__form--error">{errors.phone}</div>
             )}
             <label className="add-warehouse__form--label" htmlFor="">
@@ -217,9 +246,13 @@ function AddWarehouse({ history, component }) {
             <Field
               className="add-warehouse__form--input"
               name="email"
+              id="red-border__email"
+              placeholder="Email"
               validate={validateEmail}
             />
-            {errors.email && touched.email && <div className="add-warehouse__form--error">{errors.email}</div>}
+            {errors.email && touched.email && (
+            document.getElementById('red-border__email').className = ('error-border'),
+            <div className="add-warehouse__form--error">{errors.email}</div>)}
             </div>
             </div>
             <div className="add-warehouse__form--buttonbox">
