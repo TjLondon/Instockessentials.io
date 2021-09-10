@@ -11,7 +11,7 @@ const instockUrl = axios.create({
 })
 
 const instockRequests = {
-    getAllWarehouses: () => instockRequests.getAllWarehouses(`/warehouses`)
+    getAllWarehouses: () => instockRequests.get(`/warehouses`)
 }
 
 export default instockRequests
