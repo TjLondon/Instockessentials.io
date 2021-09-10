@@ -1,7 +1,6 @@
 import axios from 'axios'
 
-const PORT = 8080
-const instockUrl = `http://localhost:${8080}`
+const instockUrl = 'http://localhost:8080'
 
 const instockUrl = axios.create({
     baseURL: instockUrl,
