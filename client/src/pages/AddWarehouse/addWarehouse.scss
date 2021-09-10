@@ -2,10 +2,10 @@
 @import "../../Styles/partials/variables";
 @import "../../Styles//partials/typography";
 body {
-    font-family: 'Titillium Web';
-    margin: 0;
-    color: $instock-black;
-    background-color: $light-grey;
+  font-family: "Titillium Web";
+  margin: 0;
+  color: $instock-black;
+  background-color: $light-grey;
 }
 .error-icon {
   height: 24px;
@@ -18,16 +18,27 @@ body {
   margin: 1rem;
   background-color: $white;
   box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
-border-radius: 3px;
+  border-radius: 3px;
   &__title {
     font-family: "Titillium Web";
     margin: 0 0 0 1rem;
+    @include tablet {
+      border-bottom: 1px solid $cloud;
+      margin-bottom: 2rem;
+      margin-left: 2rem;
+      padding-bottom: 1rem;
+    }
   }
   &__subtitle {
     font-family: "Titillium Web";
     margin-left: 1rem;
     padding-top: 1rem;
     border-top: 1px solid $cloud;
+    @include tablet {
+      border: none;
+      margin: 0 0 0 2rem;
+      padding: 0;
+    }
   }
   &__box {
     display: flex;
@@ -42,10 +53,14 @@ border-radius: 3px;
     @include tablet {
       display: flex;
       flex-direction: row;
+      border-right: 1px solid $cloud;
     }
     &--label {
       font-family: "Titillium Web";
       margin: 1rem 0 0.25rem 1rem;
+      @include tablet {
+        margin-left: 2rem;
+      }
     }
     &--input {
       border-style: solid;
@@ -53,6 +68,14 @@ border-radius: 3px;
       border-color: $cloud;
       padding: 1rem;
       margin: 0 1rem 1rem 1rem;
+      &:focus {
+        border-color: $instock-indigo;
+        border-radius: 20px;
+        outline: none;
+      }
+      @include tablet {
+        margin: 0 2rem 1rem 2rem;
+      }
     }
     &--buttonbox {
       display: flex;
@@ -60,6 +83,8 @@ border-radius: 3px;
       background-color: $light-grey;
       @include tablet {
         justify-content: flex-end;
+        margin-top: 2rem;
+        padding-right: 2rem;
       }
     }
     &--cancel {
@@ -71,6 +96,10 @@ border-radius: 3px;
       width: 50%;
       margin: 1rem;
       background-color: $white;
+      &:hover {
+        border-color: $instock-indigo;
+        color: $instock-indigo;
+      }
       @include tablet {
         width: 15%;
       }
@@ -84,6 +113,9 @@ border-radius: 3px;
       margin: 1rem;
       background-color: $instock-indigo;
       color: $white;
+      &:hover {
+        background-color: $instock-black;
+      }
       @include tablet {
         width: 15%;
       }
@@ -91,7 +123,20 @@ border-radius: 3px;
     &--error {
       color: $red;
       margin-left: 1rem;
-      margin-top: -.5rem;
+      margin-top: -0.5rem;
     }
+  }
+}
+.left-box {
+  border-right: 1px solid $cloud;
+}
+.error-border {
+  border-color: $red;
+  border-style: solid;
+  border-radius: 20px;
+  padding: 1rem;
+  margin: 0 1rem 1rem 1rem;
+  @include tablet {
+    margin: 0 2rem 1rem 2rem;
   }
 }

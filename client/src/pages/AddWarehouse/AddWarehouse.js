@@ -11,7 +11,7 @@ import { Formik, Form, Field } from "formik";
 function validateEmail(value) {
   let error;
   if (!value) {
-    error = "Required";
+    error = "required";
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
     error = "Invalid email address";
   }
@@ -22,6 +22,8 @@ function validateWarehouse(value) {
   let error;
   if (!value) {
     error = "required";
+    document.getElementById('red-border').className = ('error-border');
+    
   }
   return error;
 }
@@ -117,13 +119,14 @@ function AddWarehouse({ history }) {
         {({ errors, touched}) => (
           
           <Form className="add-warehouse__form">
-            <div className="add-warehouse__box">
+            <div className="add-warehouse__box left-box">
             <h2 className="add-warehouse__subtitle">Warehouse Details</h2>
             <label className="add-warehouse__form--label" htmlFor="">
               Warehouse name
             </label>
             <Field
               className="add-warehouse__form--input"
+              id="red-border"
               name="warehouse_name"
               validate={validateWarehouse}
             />
@@ -216,7 +219,7 @@ function AddWarehouse({ history }) {
               name="email"
               validate={validateEmail}
             />
-            {errors.email && touched.email && <div>{errors.email}</div>}
+            {errors.email && touched.email && <div className="add-warehouse__form--error">{errors.email}</div>}
             </div>
           </Form>
         )}
