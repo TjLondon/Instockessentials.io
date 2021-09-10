@@ -7,12 +7,12 @@ require("dotenv").config();
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static("public"));
-// app.use('/', (req, res, next) => {
-//   next();
-// })
+app.use(express.static('public'));
+app.use('/', (_req, _res, next) => {
+  next();
+})
 
-app.use('/', inventoryRoute)
+app.use('/:id/inventory', inventoryRoute)
 
 //Server
 const PORT = process.env.PORT || 8000;
