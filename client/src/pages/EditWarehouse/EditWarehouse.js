@@ -1,11 +1,11 @@
 import React from 'react'
-import './home.scss'
 
-function AddInventory() {
+function editWarehouse() {
     return (
         <div>
+
         </div>
     )
 }
 
-export default AddInventory
+export default editWarehouse
