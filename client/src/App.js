@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import { Component } from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom'
 import Warehouse from './pages/Warehouse/Warehouse'
