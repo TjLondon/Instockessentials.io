@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom'
 import Warehouse from './pages/Warehouse/Warehouse'
-import DetailsWarehouse from './pages/DetailsWarehouse/DetailsWarehouse'
+// import DetailsWarehouse from './pages/DetailsWarehouse/DetailsWarehouse'
 import EditWarehouse from './pages/EditWarehouse/EditWarehouse'
 import AddWarehouse from './pages/AddWarehouse/AddWarehouse'
 import Inventory from './pages/Inventory/Inventory'

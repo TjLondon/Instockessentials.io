@@ -3,7 +3,7 @@ import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 
 import "./addWarehouse.scss";
-import "../../../../server/Assets/Icons/error-24px.svg";
+// import errorIcon from "http://localhost:8080/Assets/Icons/error-24px.svg";
 
 // function addWarehouse () {
 import { Formik, Form, Field } from "formik";
@@ -65,12 +65,15 @@ function validatePhone(value) {
   if (!value) {
     error = "required";
   }
+  else if (!/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/i.test(value)){
+    error = "input valid phone number"
+  }
   return error;
 }
 function AddWarehouse({ history }) {
   return (
     <div className="add-warehouse">
-      <h1 className="add-warehouse__title">Add New Warehouse</h1>
+      <h1 className="add-warehouse__title"><img src="http://localhost:8080/server/Assets/Icons/arrow_back-24px.svg" alt="arrow"/>Add New Warehouse</h1>
       {/* <div className="add-warehouse__box"> */}
       
       <Formik
@@ -128,7 +131,7 @@ function AddWarehouse({ history }) {
               <div className="add-warehouse__form--error">
                 <img
                   className="error-icon"
-                  src="http://localhost:8080/server/Assets/Icons/error-24px.svg"
+                  src=""
                   alt="red error icon"
                 />
                 {errors.warehouse_name}
