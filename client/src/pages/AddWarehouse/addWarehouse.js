@@ -67,7 +67,7 @@ function validatePhone(value) {
   }
   return error;
 }
-function addWarehouse({ history }) {
+function AddWarehouse({ history }) {
   return (
     <div className="add-warehouse">
       <h1 className="add-warehouse__title">Add New Warehouse</h1>
@@ -465,4 +465,4 @@ function addWarehouse({ history }) {
 // }
 // }
 
-export default addWarehouse;
+export default AddWarehouse;

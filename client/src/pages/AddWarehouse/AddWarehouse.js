@@ -1,6 +1,6 @@
 import React from 'react'
 
-function DetailsInventory() {
+function AddWarehouse() {
     return (
         <div>
 
@@ -8,4 +8,4 @@ function DetailsInventory() {
     )
 }
 
-export default DetailsInventory
+export default AddWarehouse

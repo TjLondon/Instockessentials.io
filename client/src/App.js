@@ -1,13 +1,14 @@
 import { Component } from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom'
-import addWarehouse from './pages/AddWarehouse/addWarehouse';
-import warehouse from './pages/Warehouse/warehouse';
-// import detailsWarehouse from './pages/DetailsWarehouse/detailsWarehouse';
-import editWarehouse from './pages/EditWarehouse/editWarehouse';
-import inventory from './pages/Inventory/inventory';
-import detailsInventory from './pages/DetailsInventory/detailsInventory';
-import editInventory from './pages/EditInventory/editInventory';
-import addInventory from './pages/AddInventory/addInventory';
+import Warehouse from './pages/Warehouse/Warehouse'
+import DetailsWarehouse from './pages/DetailsWarehouse/DetailsWarehouse'
+import EditWarehouse from './pages/EditWarehouse/EditWarehouse'
+import AddWarehouse from './pages/AddWarehouse/AddWarehouse'
+import Inventory from './pages/Inventory/Inventory'
+import DetailsInventory from './pages/DetailsInventory/DetailsInventory'
+import EditInventory from './pages/EditInventory/EditInventory'
+import AddInventory from './pages/AddInventory/AddInventory'
+
 
 class App extends Component {
 
@@ -16,14 +17,14 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route path='/' exact component={warehouse} />
-          {/* <Route path='/:id' exact  component={detailsWarehouse} /> */}
-          <Route path='/:id/edit'  component={editWarehouse} />
-          <Route path='/add'  component={addWarehouse} />
-          <Route path='/:id/inventory' exact component={inventory} />
-          <Route path='/:id/inventory/:itemId' exact component={detailsInventory} />
-          <Route path='/:id/inventory/:itemId/edit' exact component={editInventory} />
-          <Route path='/:id/inventory/add' exact component={addInventory} />
+          <Route path='/' exact component={Warehouse} />
+          <Route path='/:id' exact component={DetailsWarehouse} />
+          <Route path='/:id/edit' exact component={EditWarehouse} />
+          <Route path='/add' exact component={AddWarehouse} />
+          <Route path='/:id/inventory' exact component={Inventory} />
+          <Route path='/:id/inventory/:itemId' exact component={DetailsInventory} />
+          <Route path='/:id/inventory/:itemId/edit' exact component={EditInventory} />
+          <Route path='/:id/inventory/add' exact component={AddInventory} />
         </Switch>
       </BrowserRouter>
     );
