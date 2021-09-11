@@ -1,6 +1,34 @@
 @import './variables'; 
-@import './typography';
+@mixin resets {
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+    
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  }
 
+@import './typography';
+@mixin resets {
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+    
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  }
 //breakpoints
 @mixin tablet {
     @media (min-width: $tablet-breakpoint) {

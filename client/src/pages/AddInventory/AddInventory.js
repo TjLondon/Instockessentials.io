@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Warehouse = () => {
+const addInventory = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const Warehouse = () => {
     );
 };
 
-export default Warehouse;
+export default addInventory;
