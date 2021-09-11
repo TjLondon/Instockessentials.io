@@ -1,12 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-class Inventory extends Component {
-    render() {
-        return (
-            <div>
+const Inventory = () => {
+    return (
+        <div>
+            
+        </div>
+    );
+};
 
-            </div>
-        )
-    }
-}
-export default Inventory
+export default Inventory;

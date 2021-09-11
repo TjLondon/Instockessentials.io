@@ -1,12 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-class Warehouse extends Component {
-    render() {
-        return (
-            <div>
+const Warehouse = () => {
+    return (
+        <div>
+            
+        </div>
+    );
+};
 
-            </div>
-        )
-    }
-}
-export default Warehouse
+export default Warehouse;
