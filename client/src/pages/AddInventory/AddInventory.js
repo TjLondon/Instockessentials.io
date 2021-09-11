@@ -2,11 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 function AddInventory({ inventories }) {
+    console.log({inventories})
     return (
         <div className="inventories__container">
             {inventories.map((inventory) => {
                 <Link 
-                to={`/${inventory.id}/inventory`}
+                to={`/:id/inventory`}
                 key={inventory.id}
                 className="inventories__List">
                 <div className='inventories__itemName'>{inventory.itemName}</div>
@@ -17,7 +18,6 @@ function AddInventory({ inventories }) {
                 <div className="inventories__warehouseName">{inventory.warehouseName}</div>
                 </Link>
             })}
-
         </div>
     )
 }

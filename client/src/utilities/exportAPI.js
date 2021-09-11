@@ -1,1 +1,0 @@
-export const instockAPIUrl = "http://localhost:8080"

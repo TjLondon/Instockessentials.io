@@ -14,7 +14,7 @@ app.use('/', (_req, _res, next) => {
   next();
 })
 //Inventories
-app.use('/inventory', inventoryRoute)
+app.use('/:id/inventory', inventoryRoute)
 
 
 //Server

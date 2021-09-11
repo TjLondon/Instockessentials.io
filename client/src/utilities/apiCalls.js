@@ -1,15 +1,13 @@
-import axios from 'axios'
+{/* import axios from 'axios'
 
 const instockUrl = 'http://localhost:8080'
 
-const instockAxios = axios.create({
+const instockUrl = axios.create({
     baseURL: instockUrl,
     headers: {
         'Content-Type': 'application/json'
     }
 })
-console.log(instockAxios)
-
 const instockRequests = {
     getAllWarehouses: () => instockRequests.get(`/warehouses`)
 }
@@ -18,4 +16,4 @@ const instockResponse = {
 }
 
 
-export default instockRequests
+export default instockRequests */}
