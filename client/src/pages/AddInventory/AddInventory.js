@@ -21,5 +21,4 @@ function AddInventory({ inventories }) {
         </div>
     )
 }
-
 export default AddInventory

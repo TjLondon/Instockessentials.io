@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import AddInventory from '../AddInventory/AddInventory'
-import axios from 'axios'
+import instockRequests from '../../utilities/apiCalls' 
 
 class Inventory extends Component {
     state = {
@@ -8,8 +8,8 @@ class Inventory extends Component {
         selectedInventory: null,
     }
     // getInventory(warehouseID) { 
-    getInventory(warehouseID) { 
-        axios.get(`http://localhost:8080/` + warehouseID + `/inventory`)
+    getInventory(id) { 
+        instockRequests.getAllInventories(id)
         .then((response) => {
             console.log('RESPONSE DATA:::', response.data)
             console.log('RESPONSE ONLY :::', response)
@@ -20,8 +20,20 @@ class Inventory extends Component {
         }) 
     }
     componentDidMount() {
-        this.getInventory()
-        console.log('PARAMS ID: WAREHOUSE ID:: ', this.props.match.params.id)
+        instockRequests.getAllWarehouses()
+        .then((response) => {
+            this.setState({
+                inventories: response.data,
+            })
+            const id = this.props.match.params.id || response.data[0].id;
+            console.log('PARAMS ID: WAREHOUSE ID:: ', )
+            this.getInventory(id)
+        })
+    }
+    componentDidUpdate(warehouseID) { 
+        if(warehouseID.match.params.id !== this.props.match.params.id) {
+            this.getInventory(this.props.match.params.id)
+        }
     }
     render() {
         return (

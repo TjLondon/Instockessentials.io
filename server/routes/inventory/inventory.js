@@ -36,4 +36,16 @@ router.get('/:itemId', (req, res) => {
 
     res.json(findInventory)
 }); 
+
+router.delete('/:id/inventory/:itemId', (req, res) => {
+    console.log(req.params.itemId);
+    const parsedInventory = readInventoryData();
+    const filteredInventory = parsedInventory.findIndex((inventory)=> inventory.id === req.params.itemId);
+    if (!filteredInventory) {
+        return res.status(404).send('Inventory cannot be found')
+    }
+    console.log(filteredInventory);
+    parsedInventory.splice(filteredInventory, 1);
+    res.status(200).send("Delete Successful");
+})
 module.exports = router
