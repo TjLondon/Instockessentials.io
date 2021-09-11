@@ -1,5 +1,3 @@
-import logo from './logo.svg';
-import './App.css';
 import { Component } from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom'
 import Warehouse from './pages/Warehouse/Warehouse'
@@ -20,7 +18,7 @@ class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route path='/' exact component={Warehouse} />
-          <Route path='/:id' exact component={DetailsWarehouse} />
+          {/* <Route path='/:id' exact component={DetailsWarehouse} /> */}
           <Route path='/:id/edit' exact component={EditWarehouse} />
           <Route path='/add' exact component={AddWarehouse} />
           <Route path='/:id/inventory' exact component={Inventory} />
