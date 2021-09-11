@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import AddInventory from '../AddInventory/AddInventory'
-import instockAPIUrl from '../../utilities/apiCalls'
+import { axios } from 'axios'
+import instockUrl from '../../utilities/apiCalls'
 import instockResponse from '../../utilities/apiCalls'
 
 class Inventory extends Component {
@@ -9,7 +10,7 @@ class Inventory extends Component {
         selectInventories: null,
     }
     getInventoryId(id) { 
-        axios.get(`${instockAPIUrl}/` + id + `${instockResponse}`)
+        axios.get(`${instockUrl}/` + id + `${instockResponse}`)
         .then((response) => {
             this.setState({
                 selectedInventory: response.data,
@@ -17,7 +18,7 @@ class Inventory extends Component {
         }) 
     }
     getInventoryList(id, itemId) { 
-        axios.get(`${instockAPIUrl}/` + id + `${instockResponse}/`+ itemId)
+        axios.get(`${instockUrl}/` + id + `${instockResponse}/`+ itemId)
         .then((response) => {
             this.setState({
                 inventories: response.data,
@@ -36,6 +37,7 @@ class Inventory extends Component {
     }
     render() {
         const filteredInventory = this.state.inventories.filter((inventory) => inventory.id !== this.state.selectedInventory.id)
+        console.log(filteredInventory)
         return (
             <div className="inventories">
                 <AddInventory inventories={this.state.inventories}/>

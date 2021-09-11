@@ -1,13 +1,15 @@
 import axios from 'axios'
 
-const instockAPIUrl = 'http://localhost:8080'
+const instockUrl = 'http://localhost:8080'
 
-const instockUrl = axios.create({
+const instockAxios = axios.create({
     baseURL: instockUrl,
     headers: {
         'Content-Type': 'application/json'
     }
 })
+console.log(instockAxios)
+
 const instockRequests = {
     getAllWarehouses: () => instockRequests.get(`/warehouses`)
 }
