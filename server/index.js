@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-app.use("/warehouse", warehouseRoute);
+
 
 
 const warehousesRoute = require('./routes/warehouse/warehouse')
