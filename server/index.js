@@ -12,6 +12,7 @@ app.use(express.static("public"));
 
 const warehousesRoute = require('./routes/warehouse/warehouse')
 app.use("/warehouses", warehousesRoute);
+
 //Inventories
 app.use('/:id/inventory', inventoryRoute)
 
