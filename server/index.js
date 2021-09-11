@@ -10,9 +10,8 @@ app.use(express.json());
 app.use(express.static("public"));
 
 
-app.use('/', (_req, _res, next) => {
-  next();
-})
+const warehousesRoute = require('./routes/warehouse/warehouse')
+app.use("/warehouses", warehousesRoute);
 //Inventories
 app.use('/inventory', inventoryRoute)
 
