@@ -24,7 +24,8 @@ class App extends Component {
           <Route path='/:id/inventory' exact component={Inventory} />
           <Route path='/:id/inventory/:itemId' exact component={DetailsInventory} />
           <Route path='/:id/inventory/:itemId/edit' exact component={EditInventory} />
-          <Route path='/:id/inventory/add' exact component={AddInventory} />
+          {/* <Route path='/:id/inventory/add' exact component={AddInventory} /> */}
+          <Route path='/AddInventory' exact component={AddInventory} />
         </Switch>
       </BrowserRouter>
     );
