@@ -83,7 +83,7 @@ function AddWarehouse({ history, component }) {
     {component}
     <div className="add-warehouse">
       
-      <h1 className="add-warehouse__title"><img src="" alt="arrow"/>Add New Warehouse</h1>
+      <h1 className="add-warehouse__title"><img className="add-warehouse__arrow" src="http://localhost:8080/Assets/Icons/arrow_back-24px.svg" alt="arrow"/>Add New Warehouse</h1>
       {/* <div className="add-warehouse__box"> */}
       
       <Formik
@@ -145,7 +145,7 @@ function AddWarehouse({ history, component }) {
               <div className="add-warehouse__form--error">
                 <img
                   className="error-icon"
-                  src=""
+                  src="http://localhost:8080/Assets/Icons/error-24px.svg"
                   alt="red error icon"
                 />
                 {errors.warehouse_name}
@@ -163,7 +163,11 @@ function AddWarehouse({ history, component }) {
             />
             {errors.street && touched.street && (
               document.getElementById('error-border__street').className = ('error-border'),
-              <div className="add-warehouse__form--error">{errors.street}</div>
+              <div className="add-warehouse__form--error">  <img
+              className="error-icon"
+              src="http://localhost:8080/Assets/Icons/error-24px.svg"
+              alt="red error icon"
+            />{errors.street}</div>
             )}
             <label className="add-warehouse__form--label" htmlFor="">
               City
@@ -177,7 +181,11 @@ function AddWarehouse({ history, component }) {
             />
             {errors.city && touched.city && (
               document.getElementById('red-border__city').className = ('error-border'),
-              <div className="add-warehouse__form--error">{errors.city}</div>
+              <div className="add-warehouse__form--error">  <img
+              className="error-icon"
+              src="http://localhost:8080/Assets/Icons/error-24px.svg"
+              alt="red error icon"
+            />{errors.city}</div>
             )}
             <label className="add-warehouse__form--label" htmlFor="">
               Country
@@ -191,7 +199,11 @@ function AddWarehouse({ history, component }) {
             />
             {errors.country && touched.country && (
               document.getElementById('red-border__country').className = ('error-border'),
-              <div className="add-warehouse__form--error">{errors.country}</div>
+              <div className="add-warehouse__form--error">  <img
+              className="error-icon"
+              src="http://localhost:8080/Assets/Icons/error-24px.svg"
+              alt="red error icon"
+            />{errors.country}</div>
             )}
             </div>
             <div className="add-warehouse__box">
@@ -208,7 +220,11 @@ function AddWarehouse({ history, component }) {
             />
             {errors.contact && touched.contact && (
               document.getElementById('red-border__contact').className = ('error-border'),
-              <div className="add-warehouse__form--error">{errors.contact}</div>
+              <div className="add-warehouse__form--error">  <img
+              className="error-icon"
+              src="http://localhost:8080/Assets/Icons/error-24px.svg"
+              alt="red error icon"
+            />{errors.contact}</div>
             )}
             <label className="add-warehouse__form--label" htmlFor="">
               Position
@@ -222,7 +238,11 @@ function AddWarehouse({ history, component }) {
             />
             {errors.position && touched.position && (
               document.getElementById('red-border__position').className = ('error-border'),
-              <div className="add-warehouse__form--error">
+              <div className="add-warehouse__form--error">  <img
+              className="error-icon"
+              src="http://localhost:8080/Assets/Icons/error-24px.svg"
+              alt="red error icon"
+            />
                 {errors.position}
               </div>
             )}
@@ -238,7 +258,11 @@ function AddWarehouse({ history, component }) {
             />
             {errors.phone && touched.phone && (
               document.getElementById('red-border__phone').className = ('error-border'),
-              <div className="add-warehouse__form--error">{errors.phone}</div>
+              <div className="add-warehouse__form--error">  <img
+              className="error-icon"
+              src="http://localhost:8080/Assets/Icons/error-24px.svg"
+              alt="red error icon"
+            />{errors.phone}</div>
             )}
             <label className="add-warehouse__form--label" htmlFor="">
               Email
@@ -252,7 +276,11 @@ function AddWarehouse({ history, component }) {
             />
             {errors.email && touched.email && (
             document.getElementById('red-border__email').className = ('error-border'),
-            <div className="add-warehouse__form--error">{errors.email}</div>)}
+            <div className="add-warehouse__form--error">  <img
+            className="error-icon"
+            src="http://localhost:8080/Assets/Icons/error-24px.svg"
+            alt="red error icon"
+          />{errors.email}</div>)}
             </div>
             </div>
             <div className="add-warehouse__form--buttonbox">

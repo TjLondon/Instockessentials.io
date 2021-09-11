@@ -28,6 +28,9 @@ body {
   @include desktop {
     margin: 2rem 8.125rem 2rem 8.125rem;
   }
+  &__arrow {
+    margin-right: .75rem;
+  }
   &__title {
     font-family: "Titillium Web";
     margin: 2rem 0 0 1rem;
@@ -137,6 +140,8 @@ body {
       }
     }
     &--error {
+      display: flex;
+      align-items: center;
       color: $red;
       margin-left: 1rem;
       margin-top: -0.5rem;
