@@ -1,4 +1,4 @@
-{/* import axios from 'axios'
+import axios from 'axios'
 
 const instockUrl = 'http://localhost:8080'
 
@@ -16,4 +16,4 @@ const instockResponse = {
 }
 
 
-export default instockRequests */}
+export default instockRequests
