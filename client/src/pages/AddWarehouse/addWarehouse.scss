@@ -1,0 +1,175 @@
+@import "../../Styles/partials/mixins";
+@import "../../Styles/partials/variables";
+@import "../../Styles//partials/typography";
+body {
+  font-family: "Titillium Web";
+  margin: 0;
+  color: $instock-black;
+  background-color: $light-grey;
+}
+.error-icon {
+  height: 24px;
+  width: 24px;
+}
+.add-warehouse {
+  @include resets;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  background-color: $white;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  border-radius: 3px;
+  position: relative;
+  top: -4.5rem;
+  @include tablet {
+    margin: 2rem;
+    // top: -5.75rem;
+  }
+  @include desktop {
+    margin: 2rem 8.125rem 2rem 8.125rem;
+  }
+  &__arrow {
+    margin-right: .75rem;
+  }
+  &__title {
+    font-family: "Titillium Web";
+    margin: 2rem 0 0 1rem;
+    @include tablet {
+      border-bottom: 1px solid $cloud;
+      margin: 2rem 0 2rem 2rem;
+      padding-bottom: 1rem;
+    }
+  }
+  &__subtitle {
+    font-family: "Titillium Web";
+    margin-left: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid $cloud;
+    @include tablet {
+      border: none;
+      margin: 0 0 0 2rem;
+      padding: 0;
+    }
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      width: 50%;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      // display: flex;
+      // flex-direction: row;
+      border-right: 1px solid $cloud;
+    }
+    &--box {
+      display: flex;
+      flex-direction: column;
+      @include tablet {
+      flex-direction: row;
+      }
+    }
+    &--label {
+      font-family: "Titillium Web";
+      margin: 1rem 0 0.25rem 1rem;
+      @include tablet {
+        margin-left: 2rem;
+      }
+    }
+    &--input {
+      border-style: solid;
+      border-radius: 20px;
+      border-color: $cloud;
+      padding: 1rem;
+      margin: 0 1rem 1rem 1rem;
+      &:focus {
+        border-color: $instock-indigo;
+        border-radius: 20px;
+        outline: none;
+      }
+      @include tablet {
+        margin: 0 2rem 1rem 2rem;
+      }
+    }
+    &--buttonbox {
+      display: flex;
+      justify-content: center;
+      background-color: $light-grey;
+      @include tablet {
+        justify-content: flex-end;
+        margin-top: 2rem;
+        padding-right: 2rem;
+      }
+    }
+    &--cancel {
+      font-family: "Titillium Web";
+      border-style: solid;
+      border-radius: 20px;
+      border-color: $cloud;
+      padding: 0.5rem;
+      width: 50%;
+      margin: 1rem;
+      background-color: $white;
+      &:hover {
+        border-color: $instock-indigo;
+        color: $instock-indigo;
+      }
+      @include tablet {
+        width: 5%;
+      }
+    }
+    &--button {
+      border: none;
+      font-family: "Titillium Web";
+      border-radius: 20px;
+      padding: 0.5rem;
+      width: 50%;
+      margin: 1rem;
+      background-color: $instock-indigo;
+      color: $white;
+      &:hover {
+        background-color: $instock-black;
+      }
+      @include tablet {
+        width: 15%;
+        margin-right: 0;
+      }
+    }
+    &--error {
+      display: flex;
+      align-items: center;
+      color: $red;
+      margin-left: 1rem;
+      margin-top: -0.5rem;
+      @include tablet {
+        margin-left: 2rem;
+      }
+     
+    }
+  }
+}
+.left-box {
+  border-right: 1px solid $cloud;
+}
+.error-border {
+  border-color: $red;
+  border-style: solid;
+  border-radius: 20px;
+  padding: 1rem;
+  margin: 0 1rem 1rem 1rem;
+  &:focus {
+    border-color: $instock-indigo;
+    border-radius: 20px;
+    outline: none;
+  }
+  @include tablet {
+    margin: 0 2rem 1rem 2rem;
+  }
+
+}
+
+
