@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import AddInventory from '../AddInventory/AddInventory'
+import DetailsInventory from '../DetailsInventory/DetailsInventory'
 import instockRequests from '../../utilities/apiCalls'
 
 class Inventory extends Component {
@@ -36,9 +37,12 @@ class Inventory extends Component {
         }
     }
     render() {
+        const filteredInventory = this.state.inventories.filter((id) =>  id !== this.state.inventories)
+        console.log(filteredInventory)
         return (
             <div className="inventories">
                 <AddInventory inventories={this.state.inventories} />
+                <DetailsInventory filteredInventory={this.state.inventories} />
             </div>
         )
     }
