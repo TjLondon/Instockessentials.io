@@ -8,9 +8,10 @@ const instockCalls = axios.create({
         'Content-Type': 'application/json'
     }
 })
-
 const instockRequests = {
-    getAllWarehouses: () => instockCalls.get(`/warehouses`)
+    getAllWarehouses: () => instockCalls.get(`/warehouses`), 
+    getAllInventories: (id) => instockCalls.get(`/${id}/inventory`)
 }
+
 
 export default instockRequests
