@@ -85,6 +85,9 @@ body {
     border: 1px solid #BDC5D5;
     margin-top: 0.25rem;
     margin-bottom: 1rem;
+    @include desktop{
+      width:26.8rem;
+  }
   }
   &__description-name{
     font-size: 0.8125rem;
@@ -97,6 +100,9 @@ body {
     border: 1px solid #BDC5D5;
     margin-top: 0.25rem;
     margin-bottom: 1rem;
+    @include desktop{
+      width:26.8rem;
+  }
   }
   &__category-name{
     font-size: 0.8125rem;
@@ -112,6 +118,9 @@ body {
     border: 1px solid #BDC5D5;
     margin-top: 0.25rem;
     margin-bottom: 1rem;
+    @include desktop{
+      width:26.8rem;
+  }
   }
 }
 
@@ -143,6 +152,9 @@ body {
     border: 1px solid #BDC5D5;
     margin-top: 0.25rem;
     margin-bottom: 1rem;
+    @include desktop{
+      width:26.8rem;
+  }
   }
   &__house-title{
     font-size: 0.8125rem;
@@ -158,6 +170,9 @@ body {
     border: 1px solid #BDC5D5;
     margin-top: 0.25rem;
     margin-bottom: 1rem;
+    @include desktop{
+      width:26.8rem;
+  }
   }
 }
 
