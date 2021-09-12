@@ -1,5 +1,5 @@
 import React from 'react'
-import 'AddInventory.scss';
+import './AddInventory.scss';
 
 function AddInventory() {
     return (
