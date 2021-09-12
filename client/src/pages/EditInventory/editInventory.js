@@ -3,11 +3,11 @@ import './EditInventory.scss';
 
 function EditInventory() {
     return (
-        <div className='edit-inventory'>
+        <div className='add-inventory'>
 
             <section className='head'>
                 <img className='head__arrow' src='http://localhost:8080/Assets/Icons/arrow_back-24px.svg' alt='arrow back'/>
-                <h2 className='head__title'>Edit Inventory Item</h2>
+                <h2 className='head__title'>Add New Inventory Item</h2>
             </section>
 
             <section className='option'>
@@ -20,11 +20,13 @@ function EditInventory() {
                     </div>
                     <div className='details__description'>
                         <label className='details__description-name'>Description</label><br/>
-                        <input className='details__description-input' placeholder=''/>
+                        <textarea className='details__description-input' placeholder='This 50", 4K LED TV provides a crystal-clear pricture and vivid colors.'/>
                     </div>
                     <div className='details__category'>
                         <label className='details__category-name'>Category</label><br/>
-                        <input className='details__category-input' placeholder='Please Select'/>
+                        <select className='details__category-input'>
+                            <option className='details__category-choice'>Electronics</option>
+                        </select>
                     </div>
                 </section>
 
@@ -48,7 +50,9 @@ function EditInventory() {
                     
                     <section className='ava__house'>
                         <label className='ava__house-title'>Warehouse</label><br/>
-                        <input className='ava__house-dropdown' placeholder='Manhattan'/>
+                        <select className='ava__house-dropdown'>
+                            <option className='ava__choice' value=''>Manhattan</option>
+                        </select>
                     </section>
                 </section>
 
