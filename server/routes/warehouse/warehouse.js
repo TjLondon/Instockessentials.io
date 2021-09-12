@@ -15,11 +15,6 @@ const getWarehouses = () => {
     const warehouses = fs.readFileSync('./data/warehouses.json')
     return JSON.parse(warehouses)
 }
-
-const warehouseDataPath = "./data/warehouses.json";
-const readWarehouseData = fs.readFileSync(warehouseDataPath);
-const parsedWarehouseData = JSON.parse(readWarehouseData);
-
 const readWarehouseFile = () => {
   return parsedWarehouseData;
 };

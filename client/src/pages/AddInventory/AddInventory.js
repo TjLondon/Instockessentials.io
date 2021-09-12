@@ -1,9 +1,6 @@
 import React from 'react'
-<<<<<<< HEAD
 import { Link } from 'react-router-dom'
-=======
 import './home.scss'
->>>>>>> cf4b6dee5a4192687d1947c7634dd9f15f5e4d1f
 
 function AddInventory({ inventories }) {
     console.log({inventories})
