@@ -23,8 +23,10 @@ class Warehouse extends Component {
             <div className='warehouses'>
                 <div className='warehouses__header'>
                     <h1 className='warehouses__title'>Warehouses</h1>
-                    <SearchBar className='warehouses__search' />
-                    <Link to='/add' className='warehouses__button'>+ Add New Warehouse</Link>
+                    <div className='warehouses__container'>
+                        <SearchBar className='warehouses__search' />
+                        <Link to='/add' className='warehouses__button'>+ Add New Warehouse</Link>
+                    </div>                
                 </div>
                 <WarehousesList warehouses={this.state.warehouses} />
             </div>
