@@ -1,0 +1,47 @@
+@use '../../Styles/partials/mixins' as *;
+
+.item {
+    list-style: none;
+    border-top: 2px solid $cloud;
+    height: 12.25rem;
+
+    p {
+        @include mobile-large-font
+    }
+   
+    &__container {
+        display: flex;
+        max-width: 100%;
+        margin: 1rem 1.5rem;
+    }
+
+    &__column {
+        width: 50%;
+        margin-bottom: 0;
+    }
+
+    &__category-container {
+        margin-bottom: 1rem;
+        width: 100%;
+        height: 2.5rem;
+    }
+
+    &__category {
+        @include mobile-h3-labels-links-btns
+    }
+
+    &__category--actions {
+        display: none;
+    }
+
+    &__icons {
+        margin: 1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__link {
+        color: $instock-indigo;
+        display: flex;
+    }
+}

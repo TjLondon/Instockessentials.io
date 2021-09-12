@@ -1,0 +1,11 @@
+@use '../../Styles/partials/mixins' as *;
+
+.warehouse-list {
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+}
