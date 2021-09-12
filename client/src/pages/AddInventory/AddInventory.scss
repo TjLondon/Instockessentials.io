@@ -125,6 +125,8 @@ body {
     margin-top: 0.25rem;
     margin-bottom: 1rem;
     padding-left:1rem;
+    color:#5C667E;
+    appearance: none;
     @include desktop{
       width:26.8rem;
   }
@@ -180,11 +182,12 @@ body {
     margin-bottom: 1rem;
     padding-left:1rem;
     appearance: none;
+    color:#5C667E;
     @include desktop{
       width:26.8rem;
     }
    }
-   &__option-1{
+   &__choice{
      padding-left: 1rem;
    }
 }

@@ -24,7 +24,9 @@ function AddInventory() {
                     </div>
                     <div className='details__category'>
                         <label className='details__category-name'>Category</label><br/>
-                        <input className='details__category-input' placeholder='Please select'/>
+                        <select className='details__category-input'>
+                            <option className='details__category-choice'>Please select</option>
+                        </select>
                     </div>
                 </section>
 
@@ -51,7 +53,7 @@ function AddInventory() {
                         <input className='ava__house-num' placeholder='0'/><br/>
                         <label className='ava__house-title'>Warehouse</label><br/>
                         <select className='ava__house-dropdown'>
-                            <option className='ava_option' value='1'>Please Select</option>
+                            <option className='ava_choice' value='1'>Please Select</option>
                         </select>
                     </section>
                 </section>
