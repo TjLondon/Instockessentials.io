@@ -30,7 +30,7 @@ const DetailsWarehouse = () => {
                     </div>
                     <div className='info__information'>
                         <h6 className='info__information-title'>CONTACT INFORMATION</h6>
-                        <p className='details__information-text'>+1 (647) 504-0911<br/>glyon@instock.com</p>
+                        <p className='info__information-text'>+1 (647) 504-0911<br/>glyon@instock.com</p>
                     </div>
                 </div>
             </section>
@@ -40,33 +40,30 @@ const DetailsWarehouse = () => {
                 <section className='option'>
 
                     <div className='option__class'>
-
                         <div className='option__inventory'>
                             <div className='option__inventory-status'>
                                 <h6 className='option__inventory-title'>INVENTORY ITEM</h6>
-                                <img classname='optoin__inventory-pic' src='http://localhost:8080/Assets/Icons/sort-24px.svg'/>
+                                <img className='option__inventory-pic' src='http://localhost:8080/Assets/Icons/sort-24px.svg'/>
                             </div>
                             <div className='option__inventory-text'>
                                 <p className='option__inventory-text--blue'>Television</p>
                                 <img className='option__inventory-image' src='http://localhost:8080/Assets/Icons/chevron_right-24px.svg' alt='arrow to the right' />
                             </div>
                         </div>
-
                         <div className='option__category'>
                             <div className='option__catagory-status'>
                                 <h6 className='option__catagory-title'>CATEGORY</h6>
-                                <img classname='option__catagory-pic' src='http://localhost:8080/Assets/Icons/sort-24px.svg'/>
+                                <img className='option__catagory-pic' src='http://localhost:8080/Assets/Icons/sort-24px.svg'/>
                             </div>
                             <p className='option__catagory-text'>Electronics</p>
                         </div>
-
                     </div>
 
                     <div className='option__property'>
                         <div className='option__status'>
                             <div className='option__stats'>
                                 <h6 className='option__stats-title'>STATUS</h6>
-                                <img classname='option__stats-pic' src='http://localhost:8080/Assets/Icons/sort-24px.svg'/>
+                                <img className='option__stats-pic' src='http://localhost:8080/Assets/Icons/sort-24px.svg'/>
                             </div>
                             <p className='option__status-text'>IN STOCK</p>
                         </div>

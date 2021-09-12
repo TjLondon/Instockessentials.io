@@ -71,4 +71,127 @@ body {
     }
   }
 
+  .info{
+    border-bottom: 1px solid #BDC5D5;
+    padding-left:1.5rem;
+    padding-right:1.5rem;
+    padding-bottom: 0.25rem;
+    &__address-title{
+        font-size: 0.6875rem;
+        color:#5c667E;
+        padding-top:0.2rem;
+        margin-bottom: 0rem;
+    }
+    &__address-text{
+        margin-top:0.25rem;
+        font-size: 0.8125rem;
+        color:#13182C;
+    }
+    &__contact{
+      display: flex;
+      flex-direction: row;
+    }
+    &__name{
+      margin-right: 2.5rem;
+    }
+    &__name-title{
+      font-size: 0.6875rem;
+      color:#5c667E;
+      padding-top:0.2rem;
+      margin-bottom: 0rem;
+      margin-top:0.5rem;
+    }
+    &__name-text{
+      margin-top:0.25rem;
+      font-size: 0.8125rem;
+      color:#13182C;
+    }
+    &__information-title{
+      font-size: 0.6875rem;
+      color:#5c667E;
+      padding-top:0.2rem;
+      margin-bottom: 0rem;
+      margin-top:0.5rem;
+    }
+    &__information-text{
+      margin-top:0.25rem;
+      font-size: 0.8125rem;
+      color:#13182C;
+    }
+  }
 
+.option{
+  margin-left:1.5rem;
+  margin-right:1.5rem;
+  display: flex;
+  flex-direction: row;
+  &__class{
+    margin-right: 5rem;
+  }
+  &__inventory{
+    display: flex;
+    flex-direction: column;
+  }
+  &__inventory-status{
+    display: flex;
+    flex-direction: row;
+  }
+  &__inventory-title{
+    margin-bottom: 0.25rem;
+  }
+  &__inventory-pic{
+    display: none;
+  }
+  &__inventory-text{
+    display:flex;
+    flex-direction: row;
+    &--blue{
+      color:#2E66E5;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      margin-top: 0.1rem;
+    }
+  }
+  &__inventory-image{
+    margin-bottom: 0.8rem;
+  }
+  &__catagory{
+    display: flex;
+    flex-direction: column;
+  }
+  &__catagory-status{
+    display: flex;
+    flex-direction: row;
+  }
+  &__catagory-pic{
+    display: none;
+  }
+  &__property{
+    display: flex;
+    flex-direction: column;
+  }
+  &__stats{
+    display: flex;
+    flex-direction: row;
+  }
+  &__stats-title{
+    margin-bottom:0.25rem ;
+  }
+  &__stats-pic{
+    display: none;
+  }
+  &__status-text{
+    margin-top: 0.2rem;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color:#128463;
+    background-color: rgba(18, 132, 99, 0.07);
+    padding-left:0.25rem;
+    padding-right:0.25rem;
+    border-radius: 20px;
+  }
+  &__qty{
+    display: flex;
+    flex-direction: row;
+  }
+}
