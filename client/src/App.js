@@ -8,6 +8,7 @@ import Inventory from './pages/Inventory/Inventory'
 import DetailsInventory from './pages/DetailsInventory/DetailsInventory'
 import EditInventory from './pages/EditInventory/EditInventory'
 import AddInventory from './pages/AddInventory/AddInventory'
+import Header from "./components/Header/Header";
 
 
 class App extends Component {
@@ -20,7 +21,7 @@ class App extends Component {
           <Route path='/' exact component={Warehouse} />
           <Route path='/:id' exact component={DetailsWarehouse} />
           <Route path='/:id/edit' exact component={EditWarehouse} />
-          <Route path='/add' exact component={AddWarehouse} />
+          <Route path='/add' exact render={(routerProps) => <AddWarehouse component={<Header />}{...routerProps} />} />
           <Route path='/:id/inventory' exact component={Inventory} />
           <Route path='/:id/inventory/:itemId' exact component={DetailsInventory} />
           <Route path='/:id/inventory/:itemId/edit' exact component={EditInventory} />
