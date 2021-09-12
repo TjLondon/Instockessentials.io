@@ -1,4 +1,5 @@
 import React from 'react'
+import './EditInventory.scss';
 
 function EditInventory() {
     return (
