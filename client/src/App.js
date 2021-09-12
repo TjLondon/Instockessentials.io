@@ -7,7 +7,7 @@ import AddWarehouse from './pages/AddWarehouse/AddWarehouse'
 import Inventory from './pages/Inventory/Inventory'
 import DetailsInventory from './pages/DetailsInventory/DetailsInventory'
 import EditInventory from './pages/EditInventory/EditInventory'
-import AddInventory from './pages/AddInventory/AddInventory'
+import AddInventory from './pages/AddInventory/AddInventory';
 import Header from "./components/Header/Header";
 
 
@@ -17,16 +17,16 @@ class App extends Component {
 
     return (
       <BrowserRouter>
+      <Header/>
         <Switch>
-          <Route path='/' exact component={Warehouse} />
+          <Route path='/' exact component={AddInventory} />
           <Route path='/:id' exact component={DetailsWarehouse} />
           <Route path='/:id/edit' exact component={EditWarehouse} />
           <Route path='/add' exact render={(routerProps) => <AddWarehouse component={<Header />}{...routerProps} />} />
           <Route path='/:id/inventory' exact component={Inventory} />
           <Route path='/:id/inventory/:itemId' exact component={DetailsInventory} />
           <Route path='/:id/inventory/:itemId/edit' exact component={EditInventory} />
-          {/* <Route path='/:id/inventory/add' exact component={AddInventory} /> */}
-          <Route path='/AddInventory' exact component={AddInventory} />
+          <Route path='/:id/inventory/add' exact component={AddInventory} />
         </Switch>
       </BrowserRouter>
     );
