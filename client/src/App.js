@@ -17,8 +17,9 @@ class App extends Component {
 
     return (
       <BrowserRouter>
+        <Header/>
         <Switch>
-          <Route path='/' exact component={Warehouse} />
+          <Route path='/' exact component={DetailsWarehouse} />
           <Route path='/:id' exact component={DetailsWarehouse} />
           <Route path='/:id/edit' exact component={EditWarehouse} />
           <Route path='/add' exact render={(routerProps) => <AddWarehouse component={<Header />}{...routerProps} />} />

@@ -1,7 +1,74 @@
-.head__action{
-    background-color: blue;
-    height:2rem;
-    width:2rem;
-    border-radius: 50%;
+@import "../../Styles/partials/mixins";
+@import "../../Styles/partials/variables";
+@import "../../Styles//partials/typography";
+
+body {
+  font-family: "Titillium Web";
+  margin: 0;
+  color: $instock-black;
+  background-color: $light-grey;
 }
+
+.details {
+  @include resets;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  background-color: $white;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  border-radius: 3px;
+  position: relative;
+  top: -3rem;
+  @include tablet {
+    top:-7rem;
+    width: 44rem;
+    height: 37.875rem;
+    margin:auto
+  }
+  @include desktop {
+    margin: auto;
+    width: 64rem;
+    height: 37.875rem;
+    top:-7rem;
+  }
+}
+
+.head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 7rem;
+    border-bottom: 1px solid #BDC5D5;
+    padding-left:1.75rem;
+    padding-right:1.5rem;
+    @include tablet{
+      height: 7rem;
+    }
+    &__main{
+        display: flex;
+        flex-direction: row;
+    }
+    &__arrow{
+      width: 2rem;
+      height: 2rem;
+      margin-top:2.5rem;
+      margin-right:0.25rem;
+    }
+    &__title{
+      font-size: 1.75rem;
+      margin-top:2rem;
+    }
+    &__action{
+        border-radius: 50%;
+        background-color: #2E66E5;
+        width: 1.7rem;
+        height: 2.25rem;
+        border: none;
+        margin-top: 2.2rem;
+    }
+    &__edit-text{
+        display: none;
+    }
+  }
+
 
