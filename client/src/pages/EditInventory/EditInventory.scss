@@ -1,0 +1,203 @@
+
+@import "../../Styles/partials/mixins";
+@import "../../Styles/partials/variables";
+@import "../../Styles//partials/typography";
+
+body {
+  font-family: "Titillium Web";
+  margin: 0;
+  color: $instock-black;
+  background-color: $light-grey;
+}
+
+.edit-inventory {
+  @include resets;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  background-color: $white;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  border-radius: 3px;
+  position: relative;
+  top: -3rem;
+  @include tablet {
+    top:-7rem;
+    width: 44rem;
+    height: 37.875rem;
+    margin:auto
+  }
+  @include desktop {
+    margin: auto;
+    width: 64rem;
+    height: 37.875rem;
+    top:-7rem;
+  }
+}
+
+.head{
+  display: flex;
+  flex-direction: row;
+  height: 8rem;
+  border-bottom: 1px solid #BDC5D5;
+  @include tablet{
+    height: 7rem;
+  }
+  &__arrow{
+    margin-left:1.75rem;
+    margin-right:0.5rem;
+    margin-bottom: 2.7rem;
+    @include tablet{
+      margin-top:1.9rem;
+      width:2rem;
+      height: 2rem;
+    }
+  }
+  &__title{
+    font-size: 1.75rem;
+  }
+}
+
+.option{
+  margin-left:1.5rem;
+  margin-right:1.5rem;
+  @include tablet{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+  }
+}
+.details{
+  @include tablet{
+    padding-right:2rem;
+    margin-right: 2rem;
+    border-right: 1px solid #BDC5D5;
+  }
+  &__title{
+    font-size: 1.25rem;
+  }
+  &__item-name{
+    font-size: 0.8125rem;
+    font-weight: 600;
+  }
+  &__item-input{
+    width:18.4375rem;
+    height: 2.25rem;
+    border-radius: 20px;
+    border: 1px solid #BDC5D5;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+    @include desktop{
+        width:26.8rem;
+    }
+  }
+  &__description-name{
+    font-size: 0.8125rem;
+    font-weight: 600;
+  }
+  &__description-input{
+    width:18.4375rem;
+    height: 7.5rem;
+    border-radius: 20px;
+    border: 1px solid #BDC5D5;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+    @include desktop{
+        width:26.8rem;
+    }
+  }
+  &__category-name{
+    font-size: 0.8125rem;
+    font-weight: 600;
+  }
+  &__category-input{
+    background-image: url('http://localhost:8080/Assets/Icons/arrow_drop_down-24px.svg');
+    background-repeat: no-repeat;
+    background-position: top 50% right 5%;
+    width:18.4375rem;
+    height: 2.25rem;
+    border-radius: 20px;
+    border: 1px solid #BDC5D5;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+    @include desktop{
+        width:26.8rem;
+    }
+  }
+}
+
+.ava{
+  &__title{
+    font-size: 1.25rem;
+  }
+  &__status{
+    font-size: 0.8125rem;
+    margin-bottom: 0.25rem;
+  }
+  &__stockflex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.8125rem;
+    margin-left: 0;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+  }
+  &__house-title{
+    font-size: 0.8125rem;
+    font-weight: 600;
+  }
+  &__house-dropdown{
+    background-image: url('http://localhost:8080/Assets/Icons/arrow_drop_down-24px.svg');
+    background-repeat: no-repeat;
+    background-position: top 50% right 5%;
+    width:18.4375rem;
+    height: 2.25rem;
+    border-radius: 20px;
+    border: 1px solid #BDC5D5;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+    @include desktop{
+        width:26.8rem;
+    }
+  }
+}
+
+.button{
+  padding-left:1.5rem;
+  padding-right:1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: #F7F8F9;
+  @include tablet{
+    margin-top:1.2rem;
+  }
+  &__cancel{
+    width: 8.68rem;
+    height: 2.25rem;
+    border-radius: 20px;
+    background-color:white;
+    border: 1px solid #BDC5D5;
+    margin-right: 1rem;
+    margin-top:1rem;
+    margin-bottom: 1rem;
+    color:#5C667E;
+    @include tablet{
+      width: 4.5rem;
+    }
+  }
+  &__add{
+    width: 8.68rem;
+    height: 2.25rem;
+    border-radius: 20px;
+    background-color: #2E66E5;
+    color: white;
+    font-size: 600;
+    border: 1px solid #2E66E5;
+    margin-top:1rem;
+    margin-bottom: 1rem;
+    @include tablet{
+      width: 6.125rem;
+    }
+  }
+}
