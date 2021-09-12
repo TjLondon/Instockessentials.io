@@ -2,15 +2,16 @@ import axios from 'axios'
 
 const instockUrl = 'http://localhost:8080'
 
-const instockUrl = axios.create({
+const instockCalls = axios.create({
     baseURL: instockUrl,
     headers: {
         'Content-Type': 'application/json'
     }
 })
-
 const instockRequests = {
-    getAllWarehouses: () => instockRequests.get(`/warehouses`)
+    getAllWarehouses: () => instockCalls.get(`/warehouses`), 
+    getAllInventories: (id) => instockCalls.get(`/${id}/inventory`)
 }
+
 
 export default instockRequests
