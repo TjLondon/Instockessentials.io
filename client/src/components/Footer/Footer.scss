@@ -1,15 +1,14 @@
 @use '../../Styles/partials/mixins' as *;
 
 .footer{
-    height:56.625rem;
-    min-width: 12.5rem;
     color:#5c667E;
-    background-color: #D1D1D1;
+    background-color: #F7F8F9;
+    text-align: center;
+    padding-bottom: 2.5rem;
+    font-size: 1.2rem;
     @include tablet{
-        height:52.375rem;
     }
     @include desktop{
-        height: 46.1875rem;
     }
     &__text{
         font-weight: 400;
