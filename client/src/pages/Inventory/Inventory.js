@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Component } from 'react'
 import AddInventory from '../AddInventory/AddInventory'
 import instockRequests from '../../utilities/apiCalls' 
@@ -45,16 +44,3 @@ class Inventory extends Component {
     }
 }
 export default Inventory
-=======
-import React from 'react';
-
-const Inventory = () => {
-    return (
-        <div>
-            
-        </div>
-    );
-};
-
-export default Inventory;
->>>>>>> cf4b6dee5a4192687d1947c7634dd9f15f5e4d1f
