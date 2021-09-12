@@ -20,11 +20,16 @@ body {
   position: relative;
   top: -3rem;
   @include tablet {
-    margin: 2rem;
-    top: -8.5rem;
+    top:-7rem;
+    width: 44rem;
+    height: 37.875rem;
+    margin:auto
   }
   @include desktop {
-    margin: 2rem 8.125rem 2rem 8.125rem;
+    margin: auto;
+    width: 64rem;
+    height: 37.875rem;
+    top:-7rem;
   }
 }
 
@@ -33,10 +38,18 @@ body {
   flex-direction: row;
   height: 8rem;
   border-bottom: 1px solid #BDC5D5;
+  @include tablet{
+    height: 7rem;
+  }
   &__arrow{
     margin-left:1.75rem;
     margin-right:0.5rem;
     margin-bottom: 2.7rem;
+    @include tablet{
+      margin-top:1.9rem;
+      width:2rem;
+      height: 2rem;
+    }
   }
   &__title{
     font-size: 1.75rem;
@@ -46,12 +59,18 @@ body {
 .option{
   margin-left:1.5rem;
   margin-right:1.5rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  @include tablet{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+  }
 }
-
 .details{
+  @include tablet{
+    padding-right:2rem;
+    margin-right: 2rem;
+    border-right: 1px solid #BDC5D5;
+  }
   &__title{
     font-size: 1.25rem;
   }
@@ -149,6 +168,9 @@ body {
   flex-direction: row;
   justify-content: flex-end;
   background-color: #F7F8F9;
+  @include tablet{
+    margin-top:1.2rem;
+  }
   &__cancel{
     width: 8.68rem;
     height: 2.25rem;
@@ -159,6 +181,9 @@ body {
     margin-top:1rem;
     margin-bottom: 1rem;
     color:#5C667E;
+    @include tablet{
+      width: 4.5rem;
+    }
   }
   &__add{
     width: 8.68rem;
@@ -170,5 +195,8 @@ body {
     border: 1px solid #2E66E5;
     margin-top:1rem;
     margin-bottom: 1rem;
+    @include tablet{
+      width: 6.125rem;
+    }
   }
 }
