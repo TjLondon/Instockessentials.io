@@ -51,11 +51,11 @@ const DetailsWarehouse = () => {
                             </div>
                         </div>
                         <div className='option__category'>
-                            <div className='option__catagory-status'>
-                                <h6 className='option__catagory-title'>CATEGORY</h6>
-                                <img className='option__catagory-pic' src='http://localhost:8080/Assets/Icons/sort-24px.svg'/>
+                            <div className='option__category-status'>
+                                <h6 className='option__category-title'>CATEGORY</h6>
+                                <img className='option__category-pic' src='http://localhost:8080/Assets/Icons/sort-24px.svg'/>
                             </div>
-                            <p className='option__catagory-text'>Electronics</p>
+                            <p className='option__category-text'>Electronics</p>
                         </div>
                     </div>
 
@@ -71,16 +71,16 @@ const DetailsWarehouse = () => {
                         <div className='option__status-qty'>
                             <div className='option__qty'>
                                 <h6 className='option__qty-title'>QTY</h6>
-                                <img classname='option__qty-pic' src='http://localhost:8080/Assets/Icons/sort-24px.svg'/>
+                                <img className='option__qty-pic' src='http://localhost:8080/Assets/Icons/sort-24px.svg'/>
                             </div>
-                            <p className='details__status-text'>500</p>
+                            <p className='option__qty-text'>500</p>
                         </div>
                     </div>
 
                 </section>
 
                 <section className='icons'>
-                    <h6 className='icons-title'>ACTIONS</h6>
+                    <h6 className='icons__title'>ACTIONS</h6>
                     <div className='icons__pic'>
                         <img className='icons__trash'src='http://localhost:8080/Assets/Icons/delete_outline-24px.svg' alt ='trash can'/>
                         <img className='icons__pencil' src='http://localhost:8080/Assets/Icons/edit-24px.svg' alt='pencil symbol'/>

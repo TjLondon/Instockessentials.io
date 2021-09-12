@@ -155,16 +155,23 @@ body {
   &__inventory-image{
     margin-bottom: 0.8rem;
   }
-  &__catagory{
+  &__category{
     display: flex;
     flex-direction: column;
   }
-  &__catagory-status{
+  &__category-status{
     display: flex;
     flex-direction: row;
   }
-  &__catagory-pic{
+  &__category-title{
+    margin-bottom: 0.25rem;
+  }
+  &__category-pic{
     display: none;
+  }
+  &__category-text{
+    font-size: 0.8125rem;
+    margin-top:0rem;
   }
   &__property{
     display: flex;
@@ -193,5 +200,31 @@ body {
   &__qty{
     display: flex;
     flex-direction: row;
+  }
+  &__qty-title{
+    margin-top:1.85rem;
+    margin-bottom: 0.35rem;
+  }
+  &__qty-pic{
+    display: none;
+  }
+  &__qty-text{
+    font-size: 0.8125rem;
+    margin-top: 0rem;
+  }
+}
+
+.icons{
+  margin-left:1.5rem;
+  margin-right:1.5rem;
+  &__title{
+    display: none;
+  }
+  &__pic{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
   }
 }
