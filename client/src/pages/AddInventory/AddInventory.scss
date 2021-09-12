@@ -79,12 +79,13 @@ body {
     font-weight: 600;
   }
   &__item-input{
-    width:18.4375rem;
+    width:17.4375rem;
     height: 2.25rem;
     border-radius: 20px;
     border: 1px solid #BDC5D5;
     margin-top: 0.25rem;
     margin-bottom: 1rem;
+    padding-left:1rem;
     @include desktop{
       width:26.8rem;
   }
@@ -94,12 +95,17 @@ body {
     font-weight: 600;
   }
   &__description-input{
-    width:18.4375rem;
+    width:17.4375rem;
     height: 7.5rem;
     border-radius: 20px;
     border: 1px solid #BDC5D5;
     margin-top: 0.25rem;
     margin-bottom: 1rem;
+    padding-top:0.5rem;
+    padding-left:1rem;
+    font-family:Titillium Web;
+    color: #5C667E;
+    resize: none;
     @include desktop{
       width:26.8rem;
   }
@@ -112,12 +118,13 @@ body {
     background-image: url('http://localhost:8080/Assets/Icons/arrow_drop_down-24px.svg');
     background-repeat: no-repeat;
     background-position: top 50% right 5%;
-    width:18.4375rem;
+    width:17.4375rem;
     height: 2.25rem;
     border-radius: 20px;
     border: 1px solid #BDC5D5;
     margin-top: 0.25rem;
     margin-bottom: 1rem;
+    padding-left:1rem;
     @include desktop{
       width:26.8rem;
   }
@@ -146,12 +153,13 @@ body {
     font-weight: 600;
   }
   &__house-num{
-    width:18.4375rem;
+    width:17.4375rem;
     height: 2.25rem;
     border-radius: 20px;
     border: 1px solid #BDC5D5;
     margin-top: 0.25rem;
     margin-bottom: 1rem;
+    padding-left:1rem;
     @include desktop{
       width:26.8rem;
   }
@@ -164,16 +172,21 @@ body {
     background-image: url('http://localhost:8080/Assets/Icons/arrow_drop_down-24px.svg');
     background-repeat: no-repeat;
     background-position: top 50% right 5%;
-    width:18.4375rem;
+    width:17.4375rem;
     height: 2.25rem;
     border-radius: 20px;
     border: 1px solid #BDC5D5;
     margin-top: 0.25rem;
     margin-bottom: 1rem;
+    padding-left:1rem;
+    appearance: none;
     @include desktop{
       width:26.8rem;
-  }
-  }
+    }
+   }
+   &__option-1{
+     padding-left: 1rem;
+   }
 }
 
 .button{

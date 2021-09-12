@@ -20,7 +20,7 @@ function AddInventory() {
                     </div>
                     <div className='details__description'>
                         <label className='details__description-name'>Description</label><br/>
-                        <input className='details__description-input' placeholder='Please enter a brief item description...'/>
+                        <textarea className='details__description-input' placeholder='Please enter a brief item description...'/>
                     </div>
                     <div className='details__category'>
                         <label className='details__category-name'>Category</label><br/>
@@ -50,7 +50,9 @@ function AddInventory() {
                         <label className='ava__house-qty'>Quantity</label><br/>
                         <input className='ava__house-num' placeholder='0'/><br/>
                         <label className='ava__house-title'>Warehouse</label><br/>
-                        <input className='ava__house-dropdown' placeholder='Please select'/>
+                        <select className='ava__house-dropdown'>
+                            <option className='ava_option' value='1'>Please Select</option>
+                        </select>
                     </section>
                 </section>
 
