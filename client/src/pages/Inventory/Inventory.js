@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import AddInventory from '../AddInventory/AddInventory'
 import DetailsInventory from '../DetailsInventory/DetailsInventory'
 import instockRequests from '../../utilities/apiCalls'
+import SearchBox from '../../components/SearchBox/SearchBox'
 
 class Inventory extends Component {
     state = {

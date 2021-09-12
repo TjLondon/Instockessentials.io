@@ -120,8 +120,6 @@ function AddWarehouse({ history, component }) {
             .catch((error) => {
               console.log(error);
             });
-
-         
         }}
       >
         {({ errors, touched}) => (

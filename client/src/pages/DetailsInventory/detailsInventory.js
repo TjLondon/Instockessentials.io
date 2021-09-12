@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import '../AddInventory/AddInventory.scss'
 
 function DetailsInventory({ filteredInventory }) {
     const inventories = filteredInventory
@@ -7,14 +8,14 @@ function DetailsInventory({ filteredInventory }) {
     return (
         <div className="inventorydetails__container">
             <Link 
-            to={'/:id/inventory'}
+            to={'/:id/inventory/:itemId'}
             className="inventorydetails__itemName--backarrow">
             </Link>
             <Link
                 to={`/:id/inventory/:itemId/edit`}
                 className="inventory__actions--edit">
             </Link>
-            {inventories.map((inventory) => {
+            {inventories.map((inventory) => (
                 <div
                     key={inventory.id}
                     className="inventorydetails__list">
@@ -28,7 +29,7 @@ function DetailsInventory({ filteredInventory }) {
                     <div className="inventorydetails__warehouse">{inventory.warehouseName}</div>
                     <div className="inventory__actions--edit"></div>
                 </div>
-            })}
+            ))}
         </div>
     )
 }

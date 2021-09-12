@@ -14,9 +14,9 @@ import Header from "./components/Header/Header";
 class App extends Component {
 
   render() {
-
     return (
       <BrowserRouter>
+        <Header />
         <Switch>
           <Route path='/' exact component={Warehouse} />
           <Route path='/:id' exact component={DetailsWarehouse} />

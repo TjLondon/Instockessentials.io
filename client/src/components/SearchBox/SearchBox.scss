@@ -1,0 +1,38 @@
+@import '../../Styles/partials/variables';
+@import '../../Styles/partials/mixins';
+@import '../../Styles/partials/typography';
+
+
+.searchbox__container {
+    display: flex;
+    flex-direction: row-reverse;
+    background: $white;
+    border-radius: 20px; 
+    border: 1px solid $cloud;
+    margin-bottom: 0.5rem; 
+    width: 100%; 
+    padding: 8px; 
+    @include tablet {
+        margin-top: .5rem;
+        height: 3.02rem;
+    }
+}
+.searchbar {
+    border: none;
+    display: flex;
+    width: 100%;
+    @include mobile-h3-labels-links-btns;
+    font-weight: 400;
+    padding-left: 1rem;
+    color: $light-grey;
+        @include desktop {
+            @include desktop-h3-labels-links-btns
+        }
+}
+.search-img {
+    color: $slate;
+    padding-right: 1rem;
+    @include tablet {
+    margin-right: .5rem;
+    }
+}
