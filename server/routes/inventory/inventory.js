@@ -1,6 +1,7 @@
+const { randomUUID } = require('crypto');
 const express = require('express');
 const router = express.Router();
-// const uniqid = require('uniqid')
+const uniqid = require('uniqid')
 const fs = require('fs');
 // const { RSA_NO_PADDING } = require('constants')
 
@@ -68,7 +69,7 @@ router.put('/:itemId/edit', (req, res) => {
 })
 
 
-router.delete('/:id/inventory/:itemId', (req, res) => {
+router.delete('/:itemId', (req, res) => {
     console.log(req.params.itemId);
     const parsedInventory = readInventoryData();
     const filteredInventory = parsedInventory.findIndex((inventory) => inventory.id === req.params.itemId);
@@ -78,5 +79,49 @@ router.delete('/:id/inventory/:itemId', (req, res) => {
     console.log(filteredInventory);
     parsedInventory.splice(filteredInventory, 1);
     res.status(200).send("Delete Successful");
+})
+
+//create new inventory item
+const getWarehouses = () => {
+    const warehouses = fs.readFileSync('./data/warehouses.json')
+    return JSON.parse(warehouses)
+}
+
+const getWarehouseId = (req) =>
+    getWarehouses().find(warehouse => warehouse.name === req.body.warehouseName).id
+
+
+const newItem = (req) => ({
+    id: uniqid(),
+    warehouseID: getWarehouseId(req),
+    ...req.body
+})
+
+const createNewItem = (req, res) => {
+    const inventory = readInventoryData();
+    const newInventory = newItem(req)
+
+    inventory.push(newInventory);
+
+    fs.writeFileSync(inventoryFilePath, JSON.stringify(inventory));
+
+    return res.status(201).json(newInventory)
+}
+
+router.post('/', (req, res) => {
+    if (
+        !req.body.warehouseName ||
+        !req.body.itemName ||
+        !req.body.description ||
+        !req.body.category ||
+        !req.body.status ||
+        !req.body.quantity
+    ) {
+        return res.status(404).send('All inputs fields must be filled')
+    } if (
+        typeof req.body.quantity !== 'number'
+    ) {
+        return res.status(404).send('Please enter a valid number')
+    } createNewItem(req, res)
 })
 module.exports = router
