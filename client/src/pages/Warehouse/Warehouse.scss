@@ -1,22 +1,22 @@
 @use '../../Styles/partials/mixins' as *;
 
 .warehouses {
-    position: relative;
-    top: -3rem;
-    width: 98%;
     display: flex;
     flex-direction: column;
-    margin: auto;
-    border: 1px solid $cloud;
+    margin: 1rem;
     background-color: $white;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    border-radius: 3px;
+    position: relative;
+    top: -4.5rem;
 
     @include tablet {
-        top: -6rem;
-        max-width: 90%;
+        margin: 2rem;
+    // top: -5.75rem;
     }
-
+    
     @include desktop {
-        max-width: 63.75rem;
+        margin: 2rem 8.125rem 2rem 8.125rem;
     }
 
     &__header {

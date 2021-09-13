@@ -25,9 +25,9 @@ router.post("/add", (req, res) => {
   if (
     !req.body.warehouse_name ||
     !req.body.street ||
-    req.body.city ||
-    req.body.country ||
-    req.body.contact
+    !req.body.city ||
+    !req.body.country ||
+    !req.body.contact
   )
     res.status(200).send("request info not complete");
   const addWarehouse = {
@@ -53,8 +53,8 @@ router.post("/add", (req, res) => {
 
 
 // j21dm-14 Put/Patch/Edit a Warehouse--This is used for warehouse details
-router.put('/:id', ((req, res) => {
-  let { id } = req.params;
+router.put('/:id', (req, res) => {
+  let id = req.params;
   const editWarehouse = {
     "id": id,
     "name": req.body.name,
@@ -82,7 +82,7 @@ router.put('/:id', ((req, res) => {
       res.status(200).json('Warehouse has been updated')
     }
   })
-}))
+})
 
 router.get('/', (req, res) => {
   try {

@@ -18,7 +18,7 @@ class App extends Component {
 
     return (
       <BrowserRouter>
-        <Header/>
+        <Header />
         <Switch>
           <Route path='/' exact component={Warehouse} />
           <Route path='/add' exact render={(routerProps) => <AddWarehouse component={<Header />}{...routerProps} />} />
@@ -29,7 +29,7 @@ class App extends Component {
           <Route path='/:id/inventory/:itemId/edit' exact component={EditInventory} />
           <Route path='/:id/inventory/add' exact component={AddInventory} />
         </Switch>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     );
   }
