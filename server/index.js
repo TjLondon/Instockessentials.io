@@ -19,7 +19,7 @@ const warehousesRoute = require('./routes/warehouse/warehouse')
 app.use("/warehouses", warehousesRoute);
 
 //Inventories
-app.use('/:id/inventory', inventoryRoute)
+app.use('/inventory', inventoryRoute)
 
 
 //Server
