@@ -1,3 +1,4 @@
+  
 @import "../../Styles/partials/mixins";
 @import "../../Styles/partials/variables";
 @import "../../Styles//partials/typography";
@@ -125,11 +126,10 @@ body {
     margin-top: 0.25rem;
     margin-bottom: 1rem;
     padding-left:1rem;
-    color:#5C667E;
     appearance: none;
     @include desktop{
       width:26.8rem;
-  }
+    }
   }
 }
 
@@ -150,22 +150,6 @@ body {
     margin-right: 2rem;
     margin-bottom: 1rem;
   }
-  &__house-qty{
-    font-size: 0.8125rem;
-    font-weight: 600;
-  }
-  &__house-num{
-    width:17.4375rem;
-    height: 2.25rem;
-    border-radius: 20px;
-    border: 1px solid #BDC5D5;
-    margin-top: 0.25rem;
-    margin-bottom: 1rem;
-    padding-left:1rem;
-    @include desktop{
-      width:26.8rem;
-  }
-  }
   &__house-title{
     font-size: 0.8125rem;
     font-weight: 600;
@@ -182,13 +166,13 @@ body {
     margin-bottom: 1rem;
     padding-left:1rem;
     appearance: none;
-    color:#5C667E;
     @include desktop{
       width:26.8rem;
     }
    }
    &__choice{
      padding-left: 1rem;
+     color: #BDC5D5;
    }
 }
 
