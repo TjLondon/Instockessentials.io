@@ -7,7 +7,7 @@ import AddWarehouse from './pages/AddWarehouse/AddWarehouse'
 import Inventory from './pages/Inventory/Inventory'
 import DetailsInventory from './pages/DetailsInventory/DetailsInventory'
 import EditInventory from './pages/EditInventory/EditInventory'
-import AddInventory from './pages/AddInventory/AddInventory'
+import AddInventory from './pages/AddInventory/AddInventory';
 import Header from "./components/Header/Header";
 import Footer from './components/Footer/Footer';
 
