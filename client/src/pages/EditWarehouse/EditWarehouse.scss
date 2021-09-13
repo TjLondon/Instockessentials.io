@@ -32,22 +32,22 @@ body {
     margin-right: .75rem;
   }
   &__title {
-    font-family: "Titillium Web";
+    @include mobile-large-font;
     margin: 2rem 0 0 1rem;
-    padding-bottom: 1rem;
-    
     @include tablet {
+      @include desktop-h1-pageheader;
       border-bottom: 1px solid $cloud;
       margin: 2rem 0 2rem 2rem;
       padding-bottom: 1rem;
     }
   }
   &__subtitle {
-    font-family: "Titillium Web";
+    @include mobile-h2-subheader;
     margin-left: 1rem;
     padding-top: 1rem;
     border-top: 1px solid $cloud;
     @include tablet {
+      @include desktop-h2-subheader;
       border: none;
       margin: 0 0 0 2rem;
       padding: 0;
@@ -76,9 +76,13 @@ body {
       }
     }
     &--label {
-        @include mobile-h3-labels-links-btns;
+      @include mobile-h3-labels-links-btns;
+      font-weight: 700;
+
       margin: 1rem 0 0.25rem 1rem;
       @include tablet {
+        @include desktop-h3-labels-links-btns;
+        font-weight: 700;
         margin-left: 2rem;
       }
     }
@@ -103,30 +107,32 @@ body {
       background-color: $light-grey;
       @include tablet {
         justify-content: flex-end;
-         margin-top: 2rem;
+        margin-top: 2rem;
         padding-right: 2rem;
       }
     }
     &--cancel {
-      flex: 1;
-      font-family: "Titillium Web";
+      @include mobile-h3-labels-links-btns;
       border-style: solid;
       border-radius: 20px;
       border-color: $cloud;
       padding: 0.5rem;
       width: 50%;
+      margin: 1rem;
       background-color: $white;
       &:hover {
         border-color: $instock-indigo;
         color: $instock-indigo;
       }
       @include tablet {
-         width: 10%;
+        @include desktop-h3-labels-links-btns;
+        flex: 0.0886;
+        width: 5%;
       }
     }
     &--button {
       border: none;
-      font-family: "Titillium Web";
+      @include mobile-h3-labels-links-btns;
       border-radius: 20px;
       padding: 0.5rem;
       width: 50%;
@@ -137,8 +143,10 @@ body {
         background-color: $instock-black;
       }
       @include tablet {
-         width: 15%;
-        margin: 0;
+        @include desktop-h3-labels-links-btns;
+        width: 5%;
+        flex: 0.07665;
+        margin-right: 0;
       }
     }
     &--error {
