@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './InventoryList.scss'
-import SearchBox from '../../components/SearchBox/SearchBox'
+// import SearchBox from '../../components/SearchBox/SearchBox'
+import SearchBar from '../SearchBar/SearchBar.scss'
 
 function AddInventory({ inventories }) {
     console.log({ inventories })
@@ -10,7 +11,7 @@ function AddInventory({ inventories }) {
             <div className="inventories__inventory-search-button">
                 <h2 className="inventories__title">Inventory</h2>
                 <div className="inventories__search-button">
-                    <SearchBox placeholder={'Search...'}/> 
+                    <SearchBar /> 
                         <button className="inventories__buttonbox" type="submit">+ Add New Item
                         </button>
                 </div>

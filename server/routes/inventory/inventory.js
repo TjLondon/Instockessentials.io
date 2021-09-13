@@ -24,7 +24,6 @@ router.get('/', (_req, res) => {
 router.get('/:itemId', (req, res) => {
     const itemId = req.params.itemId
     const filteredInventory = inventoryFilePath.filter((inventory) => inventory.id === itemId);
-
     if(!filteredInventory) { 
         return res.status(404).json(filteredInventory).send('Inventory cannot be found')
     } 
