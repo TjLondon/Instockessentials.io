@@ -2,7 +2,7 @@ import './DetailsWarehouse.scss'
 import { Component } from 'react'
 import { Link } from 'react-router-dom'
 import SearchBar from '../../components/SearchBar/SearchBar'
-import DetailsWarehousesList from '../../components/DetailsWarehousesList/DetailsWarehousesList'
+import DetailsWarehousesList from '../../components/DetailsWarehouseList/DetailsWarehouseList'
 import instockRequests from '../../utilities/apiCalls'
 
 class Warehouse extends Component {

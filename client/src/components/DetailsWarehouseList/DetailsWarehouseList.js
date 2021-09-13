@@ -1,5 +1,5 @@
-import './DetailsWarehousesList.scss'
-import DetailsWarehousesItem from '../DetailsWarehouseListItem/DetailsWarehouseListItem';
+import './DetailsWarehouseList.scss';
+import DetailsWarehousesItem from '../DetailsWarehouseItem/DetailsWarehouseItem';
 
 const DetailsWarehouseList = ({ warehouses }) => {
     return (
