@@ -10,7 +10,8 @@ const instockCalls = axios.create({
 })
 const instockRequests = {
     getAllWarehouses: () => instockCalls.get(`/warehouses`), 
-    getAllInventories: (id) => instockCalls.get(`/${id}/inventory`)
+    getAllInventories: (id) => instockCalls.get(`/${id}/inventory`),
+    getWarehouseInventories: () => instockCalls.get(`/inventory/`)
 }
 
 

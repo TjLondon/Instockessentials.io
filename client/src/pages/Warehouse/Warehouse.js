@@ -6,6 +6,7 @@ import { Component } from 'react'
 import { Link } from 'react-router-dom'
 import SearchBar from '../../components/SearchBar/SearchBar'
 import WarehousesList from '../../components/WarehousesList/WarehousesList'
+import InventoryList from '../../components/InventoryList/InventoryList'
 import instockRequests from '../../utilities/apiCalls'
 
 class Warehouse extends Component {
@@ -15,12 +16,12 @@ class Warehouse extends Component {
 
     componentDidMount() {
         instockRequests.getAllWarehouses().then(response => {
+            console.log(response.data)
             this.setState({
                 warehouses: response.data
             })
         }).catch(error => console.log(error))
     }
-
     render() {
         return (
             <div className='warehouses'>

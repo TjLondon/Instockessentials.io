@@ -1,8 +1,7 @@
 const express = require("express");
-const warehouseRoute = require('./routes/warehouse/warehouse')
 const app = express();
 const cors = require("cors");
-const inventoryRoute = require ('./routes/inventory/inventory.js')
+
 
 require("dotenv").config();
 
@@ -14,12 +13,12 @@ app.use(express.static("public"));
 
 
 
-
 const warehousesRoute = require('./routes/warehouse/warehouse')
 app.use("/warehouses", warehousesRoute);
 
 //Inventories
-app.use('/:id/inventory', inventoryRoute)
+const inventoryRoute = require ('./routes/inventory/inventory.js')
+app.use('/inventory', inventoryRoute)
 
 
 //Server

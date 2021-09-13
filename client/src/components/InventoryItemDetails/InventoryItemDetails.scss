@@ -1,0 +1,22 @@
+@import '../../Styles/partials/variables';
+@import '../../Styles/partials/typography';
+@import '../../Styles/partials/mixins';
+
+.inventorydetails{
+    &__container {
+        position: relative;
+        top: -3rem;
+        background-color: $white;
+        box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    }
+    &__itemName {
+        @include mobile-h1-pageheader;
+    }
+    &__title {
+        @include mobile-h4-table-header;
+        color: $slate;
+    }
+    &__subtext {
+        @include mobile-medium-font;
+    }
+}

@@ -1,50 +1,27 @@
 import React, { Component } from 'react'
-import AddInventory from '../AddInventory/AddInventory'
-// import DetailsInventory from '../DetailsInventory/DetailsInventory'
 import instockRequests from '../../utilities/apiCalls'
-// import SearchBox from '../../components/SearchBox/SearchBox'
+// import InventoryItemDetails from '../../components/InventoryItemDetails/InventoryItemDetails'
 import InventoryList from '../../components/InventoryList/InventoryList'
+
 
 class Inventory extends Component {
     state = {
-        inventories: [],
-        selectedInventory: null,
-    }
-    // getInventory(warehouseID) { 
-    getInventory(id) {
-        instockRequests.getAllInventories(id)
-            .then((response) => {
-                console.log('RESPONSE DATA:::', response.data)
-                console.log('RESPONSE ONLY :::', response)
-                this.setState({
-                    inventories: response.data
-                })
-                console.log('INVENTORIES RESPONSE DATA::: ', this.state.inventories)
-            })
+        inventories: null, 
     }
     componentDidMount() {
-        instockRequests.getAllWarehouses()
-            .then((response) => {
-                this.setState({
-                    inventories: response.data,
-                })
-                const id = this.props.match.params.id || response.data[0].id;
-                console.log('PARAMS ID: WAREHOUSE ID:: ',)
-                this.getInventory(id)
+        instockRequests.getWarehouseInventories()
+        .then((response)  => {
+            console.log(response.data)
+            this.setState({
+                inventories: response.data
             })
-    }
-    componentDidUpdate(warehouseID) {
-        if (warehouseID.match.params.id !== this.props.match.params.id) {
-            this.getInventory(this.props.match.params.id)
-        }
+        }).catch(error => console.log(error))
     }
     render() {
-        const filteredInventory = this.state.inventories.filter((id) =>  id !== this.state.inventories)
-        console.log(filteredInventory)
         return (
             <div className="inventories">
-                <AddInventory inventories={this.state.inventories} />
-                <InventoryList filteredInventory={this.state.inventories}/> 
+                <InventoryList inventories={this.state.inventories} /> 
+                
             </div>
         )
     }

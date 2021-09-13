@@ -9,7 +9,7 @@ const WarehouseListItem = (warehouses) => {
                     <div className='item__category-container'>
                         <h5 className='item__category'>WAREHOUSES</h5>
                         <div className='item__link item__content'>
-                            <Link to={`/${warehouses.id}`} >{warehouses.name}</Link>
+                            <Link to={`/${warehouses.id}/inventory`} >{warehouses.name}</Link>
                             <img src='http://localhost:8080/Assets/Icons/chevron_right-24px.svg' alt='arrow' />
                         </div>
                     </div>

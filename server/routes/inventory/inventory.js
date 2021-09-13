@@ -7,18 +7,16 @@ const fs = require('fs');
 const inventoryFilePath = require ('../../data/inventories.json')
 
 const readInventoryData = () => {
-    const inventoryData  = fs.readFileSync(inventoryFilePath)
-    const parsedInventoryFile = JSON.parse(inventoryData, null, 2)
-    return parsedInventoryFile
+    const inventoryData  = fs.readFileSync('./data/inventories.json')
+    return JSON.parse(inventoryData)
 };
-
 //axios get
-router.get('/', (_req, res) => {
+router.get('/', (req, res) => {
     try {
         const parsedInventory = readInventoryData();
         return res.status(200).json(parsedInventory)
     } catch(err) {
-        return res.status(500).json({ error: 'item not found' })
+        return res.status(500).json({ error: 'item cannnot found' })
     }
 });
 router.get('/:itemId', (req, res) => {
@@ -30,7 +28,7 @@ router.get('/:itemId', (req, res) => {
     res.json(filteredInventory)
 }); 
 
-router.delete('/:id/inventory/:itemId', (req, res) => {
+router.delete('/:itemId', (req, res) => {
     console.log(req.params.itemId);
     const parsedInventory = readInventoryData();
     const filteredInventory = parsedInventory.findIndex((inventory)=> inventory.id === req.params.itemId);
