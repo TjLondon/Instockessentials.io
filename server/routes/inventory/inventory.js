@@ -38,8 +38,6 @@ router.get('/:itemId', (req, res) => {
 
     res.json(findInventory)
 });
-<<<<<<< HEAD
-=======
 
 
 router.put('/:itemId/edit', (req, res) => {
@@ -69,7 +67,6 @@ router.put('/:itemId/edit', (req, res) => {
         }
     })
 })
->>>>>>> develop
 
 
 router.delete('/:itemId', (req, res) => {
