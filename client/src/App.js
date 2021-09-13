@@ -17,11 +17,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-<<<<<<< HEAD
         <Header />
-=======
-        <Header/>
->>>>>>> develop
         <Switch>
           <Route path='/' exact component={Warehouse} />
           <Route path='/:id' exact component={DetailsWarehouse} />

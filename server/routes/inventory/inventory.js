@@ -4,7 +4,7 @@ const router = express.Router();
 const fs = require('fs');
 // const { RSA_NO_PADDING } = require('constants')
 
-const inventoryFilePath = "./data/inventories.json"
+const inventoryFilePath = require ('../../data/inventories.json')
 
 const readInventoryData = () => {
     const inventoryData  = fs.readFileSync(inventoryFilePath)
@@ -22,17 +22,12 @@ router.get('/', (_req, res) => {
     }
 });
 router.get('/:itemId', (req, res) => {
-    const itemId = req.params.id
-    const parsedInventory = readInventoryData();
-    const filteredInventory = parsedInventory.filter((inventory) => inventory.id === itemId);
+    const itemId = req.params.itemId
+    const filteredInventory = inventoryFilePath.filter((inventory) => inventory.id === itemId);
 
     if(!filteredInventory) { 
         return res.status(404).json(filteredInventory).send('Inventory cannot be found')
-    }
-    console.log('PARSED INVENTORY:: ', parsedInventory)
-    console.log('FIND INVENTORY ID ::', inventory.id)
-    console.log('PARAMS ID:: ', req.params.itemId) 
-    
+    } 
     res.json(filteredInventory)
 }); 
 
