@@ -63,12 +63,6 @@ const getWarehouseId = (req) =>
 const newItem = (req) => ({
     id: uniqid(),
     warehouseID: getWarehouseId(req),
-    // warehouseName: req.body.warehouseName,
-    // itemName: req.body.itemName,
-    // description: req.body.description,
-    // category: req.body.category,
-    // status: req.body.status,
-    // quantity: req.body.quantity,
     ...req.body
 })
 
@@ -78,7 +72,7 @@ const createNewItem = (req, res) => {
 
     inventory.push(newInventory);
 
-    //fs.writeFileSync(inventoryFilePath, JSON.stringify(inventory));
+    fs.writeFileSync(inventoryFilePath, JSON.stringify(inventory));
 
     return res.status(201).json(newInventory)
 }
