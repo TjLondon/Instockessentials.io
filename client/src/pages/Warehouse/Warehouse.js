@@ -26,7 +26,7 @@ class Warehouse extends Component {
                     <div className='warehouses__container'>
                         <SearchBar className='warehouses__search' />
                         <Link to='/add' className='warehouses__button'>+ Add New Warehouse</Link>
-                    </div>                
+                    </div>
                 </div>
                 <WarehousesList warehouses={this.state.warehouses} />
             </div>
