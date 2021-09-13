@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import AddInventory from '../AddInventory/AddInventory'
 import instockRequests from '../../utilities/apiCalls'
+import InventoryList from '../../components/InventoryList/InventoryList'
 
 class Inventory extends Component {
     state = {
@@ -39,6 +40,7 @@ class Inventory extends Component {
         return (
             <div className="inventories">
                 <AddInventory inventories={this.state.inventories} />
+                <InventoryList /> 
             </div>
         )
     }
