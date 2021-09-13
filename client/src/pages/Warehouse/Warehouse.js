@@ -22,10 +22,10 @@ class Warehouse extends Component {
         }).catch(error => console.log(error))
     }
 
-    warehouseModal = (warehouse) => {
+    warehouseModal = (selectedWarehouse) => {
         this.setState({
             toggleModal: true,
-            selectedWarehouse: warehouse
+            selectedWarehouse: selectedWarehouse
         })
     }
 
@@ -54,7 +54,6 @@ class Warehouse extends Component {
                 <DeleteModal
                     toggleModal={this.state.toggleModal}
                     selectedWarehouse={this.state.selectedWarehouse}
-                    warehouseModal={this.warehouseModal}
                     closeWarehouseModal={this.closeWarehouseModal}
                     warehouseDelete={this.warehouseDelete}
                 />
@@ -68,7 +67,7 @@ class Warehouse extends Component {
                 <WarehousesList
                     warehouses={this.state.warehouses}
                     warehouseModal={this.warehouseModal}
-                    warehouseDelete={this.warehouseDelete} />
+                />
             </div>
         )
     }
