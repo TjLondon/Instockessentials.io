@@ -18,13 +18,9 @@ class App extends Component {
 
     return (
       <BrowserRouter>
-<<<<<<< HEAD
         <Header />
-=======
-        <Header/>
->>>>>>> develop
         <Switch>
-          <Route path='/' exact component={Warehouse} />
+          <Route path='/' exact component={EditWarehouse} />
           <Route path='/:id' exact component={DetailsWarehouse} />
           <Route path='/:id/edit' exact component={EditWarehouse} />
           <Route path='/add' exact render={(routerProps) => <AddWarehouse component={<Header />}{...routerProps} />} />
@@ -33,7 +29,7 @@ class App extends Component {
           <Route path='/:id/inventory/:itemId/edit' exact component={EditInventory} />
           <Route path='/:id/inventory/add' exact component={AddInventory} />
         </Switch>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     );
   }
