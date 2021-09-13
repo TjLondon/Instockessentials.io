@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+import React from 'react';
+import DeleteModal from '../../components/DeleteModal/DeleteModal'
+
+const Warehouse = () => {
+    return (
+        <div>
+        </div>
+    );
+};
+=======
 import './Warehouse.scss'
 import { Component } from 'react'
 import { Link } from 'react-router-dom'
@@ -33,5 +44,6 @@ class Warehouse extends Component {
         )
     }
 }
+>>>>>>> develop
 
 export default Warehouse;
