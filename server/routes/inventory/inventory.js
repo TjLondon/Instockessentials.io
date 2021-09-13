@@ -6,6 +6,7 @@ const fs = require('fs');
 // const { RSA_NO_PADDING } = require('constants')
 
 const inventoryFilePath = "./data/inventories.json"
+const putInventoryFilePath = require("../../data/inventories.json")
 
 const readInventoryData = () => {
     const inventoryData = fs.readFileSync(inventoryFilePath)
@@ -38,6 +39,36 @@ router.get('/:itemId', (req, res) => {
     res.json(findInventory)
 });
 
+
+router.put('/:itemId/edit', (req, res) => {
+    let id = req.params.itemId
+    const editInventory = {
+        "id": id,
+        "warehouseID": req.body.warehouseID,
+        "warehouseName": req.body.warehouseName,
+        "itemName": req.body.itemName,
+        "description": req.body.description,
+        "category": req.body.category,
+        "status": req.body.status,
+        "quantity": Number(req.body.quantity)
+    }
+    const editInventoryData = putInventoryFilePath.map(inventory => {
+        if (inventory.id === id) {
+            return inventory = editInventory
+        } else {
+            return inventory = inventory
+        }
+    })
+    fs.writeFile(`${inventoryFilePath}`, JSON.stringify(editInventoryData), (err) => {
+        if (err) {
+            console.log(err)
+        } else {
+            res.status(200).json("Item has been updated")
+        }
+    })
+})
+
+
 router.delete('/:itemId', (req, res) => {
     console.log(req.params.itemId);
     const parsedInventory = readInventoryData();
@@ -56,9 +87,9 @@ const getWarehouses = () => {
     return JSON.parse(warehouses)
 }
 
-const getWarehouseId = (req) => 
+const getWarehouseId = (req) =>
     getWarehouses().find(warehouse => warehouse.name === req.body.warehouseName).id
- 
+
 
 const newItem = (req) => ({
     id: uniqid(),
@@ -79,16 +110,18 @@ const createNewItem = (req, res) => {
 
 router.post('/', (req, res) => {
     if (
-    !req.body.warehouseName||
-    !req.body.itemName ||
-    !req.body.description ||
-    !req.body.category ||
-    !req.body.status ||
-    !req.body.quantity
-    ) {return res.status(404).send('All inputs fields must be filled')
-    }  if (
-        typeof req.body.quantity !==  'number'
-    ) {return res.status(404).send('Please enter a valid number') 
+        !req.body.warehouseName ||
+        !req.body.itemName ||
+        !req.body.description ||
+        !req.body.category ||
+        !req.body.status ||
+        !req.body.quantity
+    ) {
+        return res.status(404).send('All inputs fields must be filled')
+    } if (
+        typeof req.body.quantity !== 'number'
+    ) {
+        return res.status(404).send('Please enter a valid number')
     } createNewItem(req, res)
 })
 module.exports = router
