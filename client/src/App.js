@@ -28,7 +28,7 @@ class App extends Component {
           <Route path='/:id/inventory/:itemId/edit' exact component={EditInventory} />
           <Route path='/:id/inventory/add' exact component={AddInventory} />
         </Switch>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     );
   }

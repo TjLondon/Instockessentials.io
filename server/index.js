@@ -17,7 +17,10 @@ const warehousesRoute = require('./routes/warehouse/warehouse')
 app.use("/warehouses", warehousesRoute);
 
 //Inventories
+<<<<<<< HEAD
 const inventoryRoute = require ('./routes/inventory/inventory.js')
+=======
+>>>>>>> develop
 app.use('/inventory', inventoryRoute)
 
 
