@@ -1,6 +1,6 @@
 import React from 'react'
 
-function editWarehouse() {
+function EditWarehouse() {
     return (
         <div>
 
@@ -8,4 +8,4 @@ function editWarehouse() {
     )
 }
 
-export default editWarehouse
+export default EditWarehouse
