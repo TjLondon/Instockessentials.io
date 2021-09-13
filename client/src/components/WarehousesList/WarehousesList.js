@@ -1,8 +1,7 @@
 import './WarehousesList.scss'
 import WarehousesListItem from '../WarehouseListItem/WarehouseListItem'
-import DeleteModal from '../DeleteModal/DeleteModal'
 
-const WarehousesList = ({ warehouses, warehouseModal, warehouseDelete, hideWarehouseModal, toggleModal }) => {
+const WarehousesList = ({ warehouses, warehouseModal, }) => {
     return (
         <div className='warehouse-list'>
             <div className='warehouse-list__categories'>
@@ -27,7 +26,11 @@ const WarehousesList = ({ warehouses, warehouseModal, warehouseDelete, hideWareh
                 </div>
             </div>
             <ul className='warehouse-list__container'>
-                {warehouses.map(WarehousesListItem, warehouseModal, warehouseDelete, hideWarehouseModal, toggleModal)}
+                {warehouses.map(data => {
+                    return (
+                        <WarehousesListItem warehouses={data} warehouseModal={warehouseModal} />
+                    )
+                })}
             </ul>
         </div>
 

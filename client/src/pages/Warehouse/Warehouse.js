@@ -10,6 +10,7 @@ import axios from 'axios'
 class Warehouse extends Component {
     state = {
         warehouses: [],
+        selectedWarehouse: null,
         toggleModal: false,
     }
 
@@ -21,14 +22,14 @@ class Warehouse extends Component {
         }).catch(error => console.log(error))
     }
 
-
-    warehouseModal = (id) => {
-        this.setstate({
+    warehouseModal = (warehouse) => {
+        this.setState({
             toggleModal: true,
+            selectedWarehouse: warehouse
         })
     }
 
-    hideWarehouseModal = () => {
+    closeWarehouseModal = () => {
         this.setState({
             toggleModal: false,
         })
@@ -37,6 +38,7 @@ class Warehouse extends Component {
     warehouseDelete = (id) => {
         instockRequests.DeleteWarehouse(id)
             .then(res => {
+                this.closeWarehouseModal()
                 instockRequests.getAllWarehouses()
                     .then(res => {
                         this.setstate({
@@ -49,6 +51,13 @@ class Warehouse extends Component {
     render() {
         return (
             <div className='warehouses'>
+                <DeleteModal
+                    toggleModal={this.state.toggleModal}
+                    selectedWarehouse={this.state.selectedWarehouse}
+                    warehouseModal={this.warehouseModal}
+                    closeWarehouseModal={this.closeWarehouseModal}
+                    warehouseDelete={this.warehouseDelete}
+                />
                 <div className='warehouses__header'>
                     <h1 className='warehouses__title'>Warehouses</h1>
                     <div className='warehouses__container'>
@@ -59,9 +68,7 @@ class Warehouse extends Component {
                 <WarehousesList
                     warehouses={this.state.warehouses}
                     warehouseModal={this.warehouseModal}
-                    toggleModal={this.state.toggleModal}
-                    warehouseDelete={this.warehouseDelete}
-                    hideWarehouseModal={this.hideWarehouseModal} />
+                    warehouseDelete={this.warehouseDelete} />
             </div>
         )
     }
