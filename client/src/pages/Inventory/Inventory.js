@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import AddInventory from '../AddInventory/AddInventory'
-import DetailsInventory from '../DetailsInventory/DetailsInventory'
+// import DetailsInventory from '../DetailsInventory/DetailsInventory'
 import instockRequests from '../../utilities/apiCalls'
-import SearchBox from '../../components/SearchBox/SearchBox'
+// import SearchBox from '../../components/SearchBox/SearchBox'
+import InventoryList from '../../components/InventoryList/InventoryList'
 
 class Inventory extends Component {
     state = {
@@ -43,7 +44,7 @@ class Inventory extends Component {
         return (
             <div className="inventories">
                 <AddInventory inventories={this.state.inventories} />
-                <DetailsInventory filteredInventory={this.state.inventories} />
+                <InventoryList filteredInventory={this.state.inventories}/> 
             </div>
         )
     }

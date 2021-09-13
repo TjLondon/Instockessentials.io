@@ -141,3 +141,15 @@
 @mixin outofstock {
     color: $red;
 }
+
+// element styles
+@mixin button {
+    @include mobile-h3-labels-links-btns;
+    background-color: $instock-indigo;
+    color: $white;
+    border-radius: 1.25rem;
+    height: 2.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
