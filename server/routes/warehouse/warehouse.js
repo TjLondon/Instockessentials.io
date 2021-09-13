@@ -91,6 +91,23 @@ router.get('/', (req, res) => {
     return res.status(500).send({ error: 'Information cannot be found.' })
   }
 })
+
+// get single warehouse
+
+router.get("/:id", (req, res) => {
+  try {
+    const warehouses = getWarehouses();
+    const singleWarehouse = warehouses.find(
+      (warehouse) => warehouse.id === req.params.id
+    );
+    return res.status(200).json(singleWarehouse)
+    console.log(singleWarehouse);
+  } catch (error) {
+    return res.status(500).send({ error: "Information cannot be found." });
+  }
+});
+
+// delete warehouse
 router.delete('/:id', (req, res) => {
 
   const deleteId = req.params.id
