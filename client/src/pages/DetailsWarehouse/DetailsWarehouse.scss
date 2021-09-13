@@ -1,230 +1,78 @@
-@import "../../Styles/partials/mixins";
-@import "../../Styles/partials/variables";
-@import "../../Styles//partials/typography";
+  
+@use '../../Styles/partials/mixins' as *;
 
-body {
-  font-family: "Titillium Web";
-  margin: 0;
-  color: $instock-black;
-  background-color: $light-grey;
-}
-
-.details {
-  @include resets;
-  display: flex;
-  flex-direction: column;
-  margin: 1rem;
-  background-color: $white;
-  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
-  border-radius: 3px;
-  position: relative;
-  top: -3rem;
-  @include tablet {
-    top:-7rem;
-    width: 44rem;
-    height: 37.875rem;
-    margin:auto
-  }
-  @include desktop {
+.warehouses {
+    position: relative;
+    top: -3rem;
+    width: 98%;
+    display: flex;
+    flex-direction: column;
     margin: auto;
-    width: 64rem;
-    height: 37.875rem;
-    top:-7rem;
-  }
-}
+    border: 1px solid $cloud;
+    background-color: $white;
 
-.head{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 7rem;
-    border-bottom: 1px solid #BDC5D5;
-    padding-left:1.75rem;
-    padding-right:1.5rem;
-    @include tablet{
-      height: 7rem;
+    @include tablet {
+        top: -6rem;
+        max-width: 90%;
     }
-    &__main{
+
+    @include desktop {
+        max-width: 63.75rem;
+    }
+
+    &__header {
+        margin: 1rem;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            height: 5.875rem;
+        }
+       
+    }
+    
+    &__title {
+        @include mobile-h1-pageheader;
+        margin-bottom: 1rem;
+
+        @include tablet {
+            margin: 0;
+        }
+    }
+
+    &__container {
         display: flex;
-        flex-direction: row;
-    }
-    &__arrow{
-      width: 2rem;
-      height: 2rem;
-      margin-top:2.5rem;
-      margin-right:0.25rem;
-    }
-    &__title{
-      font-size: 1.75rem;
-      margin-top:2rem;
-    }
-    &__action{
-        border-radius: 50%;
-        background-color: #2E66E5;
-        width: 1.7rem;
-        height: 2.25rem;
-        border: none;
-        margin-top: 2.2rem;
-    }
-    &__edit-text{
-        display: none;
-    }
-  }
+        flex-direction: column;
 
-  .info{
-    border-bottom: 1px solid #BDC5D5;
-    padding-left:1.5rem;
-    padding-right:1.5rem;
-    padding-bottom: 0.25rem;
-    &__address-title{
-        font-size: 0.6875rem;
-        color:#5c667E;
-        padding-top:0.2rem;
-        margin-bottom: 0rem;
+        @include tablet {
+            flex-direction: row;
+            align-items: center;
+        }
+      
     }
-    &__address-text{
-        margin-top:0.25rem;
-        font-size: 0.8125rem;
-        color:#13182C;
-    }
-    &__contact{
-      display: flex;
-      flex-direction: row;
-    }
-    &__name{
-      margin-right: 2.5rem;
-    }
-    &__name-title{
-      font-size: 0.6875rem;
-      color:#5c667E;
-      padding-top:0.2rem;
-      margin-bottom: 0rem;
-      margin-top:0.5rem;
-    }
-    &__name-text{
-      margin-top:0.25rem;
-      font-size: 0.8125rem;
-      color:#13182C;
-    }
-    &__information-title{
-      font-size: 0.6875rem;
-      color:#5c667E;
-      padding-top:0.2rem;
-      margin-bottom: 0rem;
-      margin-top:0.5rem;
-    }
-    &__information-text{
-      margin-top:0.25rem;
-      font-size: 0.8125rem;
-      color:#13182C;
-    }
-  }
 
-.option{
-  margin-left:1.5rem;
-  margin-right:1.5rem;
-  display: flex;
-  flex-direction: row;
-  &__class{
-    margin-right: 5rem;
-  }
-  &__inventory{
-    display: flex;
-    flex-direction: column;
-  }
-  &__inventory-status{
-    display: flex;
-    flex-direction: row;
-  }
-  &__inventory-title{
-    margin-bottom: 0.25rem;
-  }
-  &__inventory-pic{
-    display: none;
-  }
-  &__inventory-text{
-    display:flex;
-    flex-direction: row;
-    &--blue{
-      color:#2E66E5;
-      font-size: 0.8125rem;
-      font-weight: 600;
-      margin-top: 0.1rem;
-    }
-  }
-  &__inventory-image{
-    margin-bottom: 0.8rem;
-  }
-  &__category{
-    display: flex;
-    flex-direction: column;
-  }
-  &__category-status{
-    display: flex;
-    flex-direction: row;
-  }
-  &__category-title{
-    margin-bottom: 0.25rem;
-  }
-  &__category-pic{
-    display: none;
-  }
-  &__category-text{
-    font-size: 0.8125rem;
-    margin-top:0rem;
-  }
-  &__property{
-    display: flex;
-    flex-direction: column;
-  }
-  &__stats{
-    display: flex;
-    flex-direction: row;
-  }
-  &__stats-title{
-    margin-bottom:0.25rem ;
-  }
-  &__stats-pic{
-    display: none;
-  }
-  &__status-text{
-    margin-top: 0.2rem;
-    font-size: 0.6875rem;
-    font-weight: 600;
-    color:#128463;
-    background-color: rgba(18, 132, 99, 0.07);
-    padding-left:0.25rem;
-    padding-right:0.25rem;
-    border-radius: 20px;
-  }
-  &__qty{
-    display: flex;
-    flex-direction: row;
-  }
-  &__qty-title{
-    margin-top:1.85rem;
-    margin-bottom: 0.35rem;
-  }
-  &__qty-pic{
-    display: none;
-  }
-  &__qty-text{
-    font-size: 0.8125rem;
-    margin-top: 0rem;
-  }
-}
+    &__button {
+        @include button;
+        width: 100%;
+        display: flex;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
 
-.icons{
-  margin-left:1.5rem;
-  margin-right:1.5rem;
-  &__title{
-    display: none;
-  }
-  &__pic{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-  }
+        @include tablet {
+            margin: 0;
+            margin-left: 1rem;
+            width: 11.5rem;
+        }
+    }
+
+    &__search {
+        @include tablet {
+            margin: 0;
+            width: 11.5rem;
+        }
+    }
+
+
 }
