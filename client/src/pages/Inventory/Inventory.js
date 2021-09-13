@@ -1,19 +1,17 @@
 import React, { Component } from 'react'
 import instockRequests from '../../utilities/apiCalls'
-// import InventoryItemDetails from '../../components/InventoryItemDetails/InventoryItemDetails'
 import InventoryList from '../../components/InventoryList/InventoryList'
 
 
 class Inventory extends Component {
     state = {
-        inventories: null, 
+        inventories: [], 
     }
     componentDidMount() {
         instockRequests.getWarehouseInventories()
         .then((response)  => {
-            console.log(response.data)
             this.setState({
-                inventories: response.data
+                inventories: response.data[0],
             })
         }).catch(error => console.log(error))
     }
@@ -21,7 +19,6 @@ class Inventory extends Component {
         return (
             <div className="inventories">
                 <InventoryList inventories={this.state.inventories} /> 
-                
             </div>
         )
     }

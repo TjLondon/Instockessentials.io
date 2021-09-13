@@ -7,6 +7,8 @@
     position: relative;
     top: -4.5rem;
     background-color: $light-grey;
+    max-width: 100%;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
     @include tablet {
         margin: 2rem;
         // top: -5.75rem;
@@ -15,7 +17,6 @@
         margin: 2rem 8.125rem 2rem 8.125rem;
     }
     &__container {
-        margin: 1rem;
         display: flex;
         flex-direction: column;
     }
@@ -24,11 +25,13 @@
         @include mobile-h1-pageheader;
         display: flex;
         align-items: center;
+        margin: 1rem 0 1rem 1.5rem ;
     }
     &__search-button { 
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 0 1.5rem;
         @include tablet {
             flex-direction: row;
         }
@@ -45,7 +48,6 @@
             background-color: $instock-black;
         }
         @include tablet {
-            width: 8rem;
             margin-right: 0;
         }
     }
@@ -79,6 +81,12 @@
         @include mobile-h4-table-header; 
         text-transform: uppercase;
         font-style: normal;
+        @include tablet { 
+            display: none;
+        }
+        @include desktop {
+            display: none;
+        }
     }
     &__p2 {
         color: $instock-black;
@@ -94,6 +102,9 @@
         &:hover {
             cursor: pointer;
         }
+        @include tablet {
+            justify-content: none;
+        }
     }
     &__divcontainer {
         display: flex;
@@ -101,5 +112,22 @@
         @include tablet {
             flex-direction: row;
         }
+    }
+    &__divider {
+        @include tablet {
+            display: none;
+        }
+        @include desktop {
+            display: none;
+        }
+    }
+}
+.id {
+    border-top: 2px solid $cloud;
+    height: 12.25rem;
+    @include tablet {
+        display: flex;
+        align-items: center; 
+        // height: 4.75rem;
     }
 }
