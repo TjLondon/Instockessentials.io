@@ -1,78 +1,158 @@
-  
-@use '../../Styles/partials/mixins' as *;
+@import "../../Styles/partials/mixins";
+@import "../../Styles/partials/variables";
+@import "../../Styles//partials/typography";
 
-.warehouses {
-    position: relative;
-    top: -3rem;
-    width: 98%;
-    display: flex;
-    flex-direction: column;
+body {
+  font-family: "Titillium Web";
+  margin: 0;
+  color: $instock-black;
+  background-color: $light-grey;
+}
+
+.details {
+  @include resets;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  background-color: $white;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  border-radius: 3px;
+  position: relative;
+  top: -3rem;
+  @include tablet {
+    top:-7rem;
+    width: 44rem;
+    height: 55rem;
+    margin:auto
+  }
+  @include desktop {
     margin: auto;
-    border: 1px solid $cloud;
-    background-color: $white;
+    width: 64rem;
+    height: 55rem;
+    top:-7rem;
+  }
+}
 
-    @include tablet {
-        top: -6rem;
-        max-width: 90%;
+.head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 7rem;
+    border-bottom: 1px solid #BDC5D5;
+    padding-left:1.75rem;
+    padding-right:1.5rem;
+    @include tablet{
+      height: 8rem;
+      padding-bottom: 2.25rem;
     }
-
-    @include desktop {
-        max-width: 63.75rem;
+    &__main{
+        display: flex;
+        flex-direction: row;
     }
-
-    &__header {
-        margin: 1rem;
-
-        @include tablet {
+    &__arrow{
+      width: 2rem;
+      height: 2rem;
+      margin-top:2.5rem;
+      margin-right:0.25rem;
+    }
+    &__title{
+      font-size: 1.75rem;
+      margin-top:2rem;
+    }
+    &__action{
+        border-radius: 50%;
+        background-color: #2E66E5;
+        width: 2.25rem;
+        height: 2.25rem;
+        border: none;
+        margin-top: 2.2rem;
+        @include tablet{
             display: flex;
             flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            height: 5.875rem;
-        }
-       
+            width: 5rem;
+            border-radius: 20px;
+          }
     }
-    
-    &__title {
-        @include mobile-h1-pageheader;
-        margin-bottom: 1rem;
-
-        @include tablet {
-            margin: 0;
+    &__edit{
+        @include tablet{
+            margin-left:0.5rem;
+            margin-top:0.25rem;
         }
     }
+    &__edit-text{
+        display: none;
+        @include tablet{
+            display: block;
+            color: white;
+            font-weight: 600;
+            padding-left:0.25rem;
+            padding-top:0.6rem;
+            padding-left:0.5rem;
+        }
+    }
+  }
 
-    &__container {
+  .info{
+    padding:1.5rem;
+    @include tablet{
+        padding-right: 5rem;
         display: flex;
-        flex-direction: column;
-
-        @include tablet {
-            flex-direction: row;
-            align-items: center;
-        }
-      
+        flex-direction: row;
     }
-
-    &__button {
-        @include button;
-        width: 100%;
-        display: flex;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-
-        @include tablet {
-            margin: 0;
-            margin-left: 1rem;
-            width: 11.5rem;
+    &__address{
+        @include tablet{
+            padding-right: 6rem;
+            margin-right: 2rem;
+            margin-top:0.5rem;
+            border-right: 1px solid #5c667E;
+        }
+        @include desktop{
+            padding-right: 10rem;
         }
     }
-
-    &__search {
-        @include tablet {
-            margin: 0;
-            width: 11.5rem;
-        }
+    &__address-title{
+        font-size: 0.6875rem;
+        color:#5c667E;
+        padding-top:0.2rem;
+        margin-bottom: 0rem;
     }
-
-
-}
+    &__address-text{
+        margin-top:0.25rem;
+        font-size: 0.8125rem;
+        color:#13182C;
+    }
+    &__contact{
+      display: flex;
+      flex-direction: row;
+    }
+    &__name{
+      margin-right: 4rem;
+      @include desktop{
+          padding-right:5rem;
+      }
+    }
+    &__name-title{
+      font-size: 0.6875rem;
+      color:#5c667E;
+      padding-top:0.2rem;
+      margin-bottom: 0rem;
+      margin-top:0.5rem;
+    }
+    &__name-text{
+      margin-top:0.25rem;
+      font-size: 0.8125rem;
+      color:#13182C;
+    }
+    &__information-title{
+      font-size: 0.6875rem;
+      color:#5c667E;
+      padding-top:0.2rem;
+      margin-bottom: 0rem;
+      margin-top:0.5rem;
+    }
+    &__information-text{
+      margin-top:0.25rem;
+      font-size: 0.8125rem;
+      color:#13182C;
+    }
+  }

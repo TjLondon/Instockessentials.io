@@ -6,19 +6,19 @@ const DetailsWarehouseList = ({ warehouses }) => {
         <div className='warehouse-list'>
             <div className='warehouse-list__categories'>
                 <div className='warehouse-list__category-container'>
-                    <h5 className='warehouse-list__category warehouse-list__category--warehouses'>WAREHOUSES</h5>
+                    <h5 className='warehouse-list__category warehouse-list__category--warehouses'>INVENTORY ITEM</h5>
                     <img src='http://localhost:8080/Assets/Icons/sort-24px.svg' alt='sort button' />
                 </div>
                 <div className='warehouse-list__category-container'>
-                    <h5  className='warehouse-list__category warehouse-list__category--address'>ADDRESS</h5>
+                    <h5  className='warehouse-list__category warehouse-list__category--address'>CATEGORY</h5>
                     <img src='http://localhost:8080/Assets/Icons/sort-24px.svg' alt='sort button' />
                 </div>
                 <div className='warehouse-list__category-container'>
-                    <h5  className='warehouse-list__category warehouse-list__category--name'>CONTACT NAME</h5>
+                    <h5  className='warehouse-list__category warehouse-list__category--name'>STATUS</h5>
                     <img src='http://localhost:8080/Assets/Icons/sort-24px.svg' alt='sort button' />
                 </div>
                 <div className='warehouse-list__category-container'>
-                    <h5  className='warehouse-list__category warehouse-list__category--phone'>CONTACT INFORMATION</h5>
+                    <h5  className='warehouse-list__category warehouse-list__category--phone'>QUANTITY</h5>
                     <img src='http://localhost:8080/Assets/Icons/sort-24px.svg' alt='sort button' />
                 </div>
                 <div className='warehouse-list__category-container'>
