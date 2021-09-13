@@ -4,10 +4,13 @@ import { Link } from 'react-router-dom'
 import SearchBar from '../../components/SearchBar/SearchBar'
 import WarehousesList from '../../components/WarehousesList/WarehousesList'
 import instockRequests from '../../utilities/apiCalls'
+import DeleteModal from '../../components/DeleteModal/DeleteModal'
+import axios from 'axios'
 
 class Warehouse extends Component {
     state = {
-        warehouses: []
+        warehouses: [],
+        toggleModal: false,
     }
 
     componentDidMount() {
@@ -16,6 +19,31 @@ class Warehouse extends Component {
                 warehouses: response.data
             })
         }).catch(error => console.log(error))
+    }
+
+
+    warehouseModal = (id) => {
+        this.setstate({
+            toggleModal: true,
+        })
+    }
+
+    hideWarehouseModal = () => {
+        this.setState({
+            toggleModal: false,
+        })
+    }
+
+    warehouseDelete = (id) => {
+        instockRequests.DeleteWarehouse(id)
+            .then(res => {
+                instockRequests.getAllWarehouses()
+                    .then(res => {
+                        this.setstate({
+                            warehouses: res.data,
+                        })
+                    })
+            })
     }
 
     render() {
@@ -28,7 +56,12 @@ class Warehouse extends Component {
                         <Link to='/add' className='warehouses__button'>+ Add New Warehouse</Link>
                     </div>
                 </div>
-                <WarehousesList warehouses={this.state.warehouses} />
+                <WarehousesList
+                    warehouses={this.state.warehouses}
+                    warehouseModal={this.warehouseModal}
+                    toggleModal={this.state.toggleModal}
+                    warehouseDelete={this.warehouseDelete}
+                    hideWarehouseModal={this.hideWarehouseModal} />
             </div>
         )
     }

@@ -1,8 +1,10 @@
 import React from 'react'
 import './DeleteModal.scss';
 
-const DeleteModal = (props) => {
-
+const DeleteModal = ({ warehouses, toggleModal, warehouseModal, warehouseDelete, hideWarehouseModal }) => {
+    if (warehouses === null || !toggleModal) {
+        return null;
+    }
     return (
         <div className='modal'>
             <div className='modal__content'>
@@ -15,7 +17,7 @@ const DeleteModal = (props) => {
                 </div>
                 <div className='modal__footer'>
                     <button className='modal__footer-cancel'>Cancel</button>
-                    <button className='modal__footer-delete'>Delete</button>
+                    <button className='modal__footer-delete' onClick={() => warehouseDelete(warehouses.id)}>Delete</button>
                 </div>
             </div>
         </div>
