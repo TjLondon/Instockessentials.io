@@ -25,9 +25,9 @@ router.post("/add", (req, res) => {
   if (
     !req.body.warehouse_name ||
     !req.body.street ||
-    req.body.city ||
-    req.body.country ||
-    req.body.contact
+    !req.body.city ||
+    !req.body.country ||
+    !req.body.contact
   )
     res.status(200).send("request info not complete");
   const addWarehouse = {
