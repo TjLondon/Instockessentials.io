@@ -1,0 +1,17 @@
+@use '../../Styles/partials/mixins' as *;
+
+.footer{
+    color:#5c667E;
+    background-color: #F7F8F9;
+    text-align: center;
+    padding-bottom: 2.5rem;
+    font-size: 1.2rem;
+    @include tablet{
+    }
+    @include desktop{
+    }
+    &__text{
+        font-weight: 400;
+        font-size: 0.6875rem;
+    }
+}

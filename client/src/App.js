@@ -9,6 +9,7 @@ import DetailsInventory from './pages/DetailsInventory/DetailsInventory'
 import EditInventory from './pages/EditInventory/EditInventory'
 import AddInventory from './pages/AddInventory/AddInventory'
 import Header from "./components/Header/Header";
+import Footer from './components/Footer/Footer';
 
 
 class App extends Component {
@@ -17,7 +18,11 @@ class App extends Component {
 
     return (
       <BrowserRouter>
+<<<<<<< HEAD
         <Header />
+=======
+        <Header/>
+>>>>>>> develop
         <Switch>
           <Route path='/' exact component={Warehouse} />
           <Route path='/:id' exact component={DetailsWarehouse} />
@@ -28,6 +33,7 @@ class App extends Component {
           <Route path='/:id/inventory/:itemId/edit' exact component={EditInventory} />
           <Route path='/:id/inventory/add' exact component={AddInventory} />
         </Switch>
+        <Footer/>
       </BrowserRouter>
     );
   }
