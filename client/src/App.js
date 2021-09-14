@@ -21,7 +21,7 @@ class App extends Component {
         <Switch>
           <Route path='/:id/inventory/add' exact component={AddInventory} />
           <Route path='/' exact component={Warehouse} />
-          <Route path='/add' exact render={(routerProps) => <AddWarehouse component={<Header />}{...routerProps} />} />
+          <Route path='/add' exact component={AddWarehouse}/>
           <Route path='/:id' exact component={DetailsWarehouse} />
           <Route path='/:id/edit' exact component={EditWarehouse} />
           <Route path='/:id/inventory' exact component={Inventory} />
