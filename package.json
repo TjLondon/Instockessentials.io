@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/softwareiscool/instock-sprint/issues"
   },
-  "homepage": "https://github.com/softwareiscool/instock-sprint#readme"
+  "homepage": "https://github.com/softwareiscool/instock-sprint#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
