@@ -1,8 +1,12 @@
+import React from 'react';
+// import AddWarehouse from '../AddWarehouse/AddWarehouse';
+// import DeleteModal from '../../components/DeleteModal/DeleteModal'
 import './Warehouse.scss'
 import { Component } from 'react'
 import { Link } from 'react-router-dom'
 import SearchBar from '../../components/SearchBar/SearchBar'
 import WarehousesList from '../../components/WarehousesList/WarehousesList'
+// import InventoryList from '../../components/InventoryList/InventoryList'
 import instockRequests from '../../utilities/apiCalls'
 import DeleteModal from '../../components/DeleteModal/DeleteModal'
 import axios from 'axios'
@@ -16,6 +20,7 @@ class Warehouse extends Component {
 
     componentDidMount() {
         instockRequests.getAllWarehouses().then(response => {
+            console.log(response.data)
             this.setState({
                 warehouses: response.data
             })
@@ -72,5 +77,4 @@ class Warehouse extends Component {
         )
     }
 }
-
 export default Warehouse;
