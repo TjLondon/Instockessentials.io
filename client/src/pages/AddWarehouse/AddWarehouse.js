@@ -3,6 +3,7 @@ import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import './AddWarehouse.scss';
 import { Formik, Form, Field } from "formik";
+import { Link } from 'react-router-dom'
 
 function validateEmail(value) {
   let error;
@@ -79,7 +80,11 @@ function AddWarehouse({ history, component }) {
       {component}
       <div className="add-warehouse">
 
-        <h1 className="add-warehouse__title"><img className="add-warehouse__arrow" src="http://localhost:8080/Assets/Icons/arrow_back-24px.svg" alt="arrow" />Add New Warehouse</h1>
+        <h1 className="add-warehouse__title">
+          <Link to={"/"}>
+            <img className="add-warehouse__arrow" src="http://localhost:8080/Assets/Icons/arrow_back-24px.svg" alt="arrow" />
+          </Link>
+          Add New Warehouse</h1>
         {/* <div className="add-warehouse__box"> */}
 
         <Formik

@@ -6,7 +6,7 @@ const Header = () => {
         <header className='header'>
             <div className='header__container'>
                 <Link to={'/'}>
-                    <img className='header__logo' src='http://localhost:8080/Assets/Logo/InStock-Logo_1x.png' alt='instock logo'/>
+                    <img className='header__logo' src='http://localhost:8080/Assets/Logo/InStock-Logo_1x.png' alt='instock logo' />
                 </Link>
                 <div className='header__options'>
                     <NavLink to={'/'} exact={true} className='header__link' activeClassName='header__active'>Warehouses</NavLink>
