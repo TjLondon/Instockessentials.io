@@ -1,55 +1,7 @@
 import React from 'react'
 import './EditInventory.scss';
-import { Component } from 'react';
-import instockRequests from '../../utilities/apiCalls';
 
-class EditInventory extends Component {
-
-    state = {
-        warehouses: [],
-        categories: [],
-    }
-
-    componentDidMount() {
-        instockRequests.getAllWarehouses().then((
-            response) =>{
-            console.log(response.data)
-            this.setState({
-                warehouses: response.data,
-            })}
-        )
-
-        //const id = this.props.match.params;
-    
-        instockRequests.getAllInventories().then((
-            response) => {
-            console.log(response.data)
-            this.setState({
-                categories: response.data,
-            })}
-        )
-    }
-
-
-    onSubmitHandler = (e) => {
-        e.preventDefault()
-
-        const itemName = e.target.itemName.value
-        const description = e.target.description.value
-        const category = e.target.category.value
-        const status = e.target.status.value
-        const quantity = e.target.quantity.value
-        const warehouse = e.target.warehouse.value
-
-        instockRequests.postNewInventoryItem({ 
-            itemName, description, category, status, quantity, warehouse })
-        .then(() => {
-            console.log('New inventory item has been created')
-        }).catch((error) => console.log(error))
-    }
-
-
-    render(){
+function EditInventory() {
     return (
         <div className='add-inventory'>
 
@@ -113,6 +65,5 @@ class EditInventory extends Component {
         </div>
     )
 }
-}
 
-export default EditInventory;
+export default EditInventory
