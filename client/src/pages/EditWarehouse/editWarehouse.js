@@ -4,9 +4,6 @@ import { v4 as uuidv4 } from "uuid";
 import "./EditWarehouse.scss";
 import { Formik, Form, Field } from "formik";
 
-<<<<<<< HEAD
-function EditWarehouse() {
-=======
 function validateEmail(value) {
     let error;
     if (!value) {
@@ -81,7 +78,6 @@ function validatePhone(value) {
     return error;
 }
 function EditWarehouse({ history, component }) {
->>>>>>> develop
     return (
         <>
             {component}
@@ -300,11 +296,4 @@ function EditWarehouse({ history, component }) {
         </>
     );
 }
-
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> develop
 export default EditWarehouse

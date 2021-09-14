@@ -20,11 +20,6 @@ function validateWarehouse(value) {
   let error;
   if (!value) {
     error = "this field is required";
-<<<<<<< HEAD
-=======
-
-
->>>>>>> develop
   }
   return error;
 }
@@ -32,10 +27,6 @@ function validateStreet(value) {
   let error;
   if (!value) {
     error = "this field is required";
-<<<<<<< HEAD
-=======
-
->>>>>>> develop
   }
   return error;
 }
@@ -43,10 +34,6 @@ function validateCity(value) {
   let error;
   if (!value) {
     error = "this field is required";
-<<<<<<< HEAD
-=======
-
->>>>>>> develop
   }
   return error;
 }
@@ -89,75 +76,6 @@ function validatePhone(value) {
 function AddWarehouse({ history, component }) {
   return (
     <>
-<<<<<<< HEAD
-    {component}
-    <div className="add-warehouse">
-      
-      <h1 className="add-warehouse__title"><img className="add-warehouse__arrow" src="http://localhost:8080/Assets/Icons/arrow_back-24px.svg" alt="arrow"/>Add New Warehouse</h1>
-      {/* <div className="add-warehouse__box"> */}
-      
-      <Formik
-        initialValues={{
-          warehouse_name: "",
-          street: "",
-          city: "",
-          country: "",
-          contact: "",
-          position: "",
-          phone: "",
-          email: "",
-        }}
-        onSubmit={(values) => {
-         
-          axios
-            .post("http://localhost:8080/add", {
-              id: uuidv4(),
-              name: values.warehouse_name,
-              address: values.street,
-              city: values.city,
-              country: values.country,
-              contact: {
-                name: values.contact,
-                position: values.position,
-                phone: values.phone,
-                email: values.email,
-              },
-            })
-            .then(() => {
-              alert("Warehouse added!");
-              history.push("/");
-            })
-            .catch((error) => {
-              console.log(error);
-            });
-        }}
-      >
-        {({ errors, touched}) => (
-          
-          <Form className="add-warehouse__form">
-            <div className="add-warehouse__form--box">
-            <div className="add-warehouse__box left-box">
-            <h2 className="add-warehouse__subtitle">Warehouse Details</h2>
-            <label className="add-warehouse__form--label" htmlFor="">
-              Warehouse name
-            </label>
-            <Field
-              className="add-warehouse__form--input red-border"
-              id="error-border"
-              name="warehouse_name"
-              placeholder="Warehouse Name"
-              validate={validateWarehouse}
-            />
-            {errors.warehouse_name && touched.warehouse_name && (
-              document.getElementById('error-border').className = ('error-border'),
-              <div className="add-warehouse__form--error">
-                <img
-                  className="error-icon"
-                  src="http://localhost:8080/Assets/Icons/error-24px.svg"
-                  alt="red error icon"
-                />
-                {errors.warehouse_name}
-=======
       {component}
       <div className="add-warehouse">
 
@@ -360,7 +278,6 @@ function AddWarehouse({ history, component }) {
                       alt="red error icon"
                     />{errors.email}</div>)}
                 </div>
->>>>>>> develop
               </div>
               <div className="add-warehouse__form--buttonbox">
                 <button className="add-warehouse__form--cancel">Cancel</button>

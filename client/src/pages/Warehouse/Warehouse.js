@@ -6,7 +6,7 @@ import { Component } from 'react'
 import { Link } from 'react-router-dom'
 import SearchBar from '../../components/SearchBar/SearchBar'
 import WarehousesList from '../../components/WarehousesList/WarehousesList'
-import InventoryList from '../../components/InventoryList/InventoryList'
+// import InventoryList from '../../components/InventoryList/InventoryList'
 import instockRequests from '../../utilities/apiCalls'
 
 class Warehouse extends Component {

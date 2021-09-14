@@ -5,13 +5,6 @@ const uniqid = require('uniqid')
 const fs = require('fs');
 // const { RSA_NO_PADDING } = require('constants')
 
-<<<<<<< HEAD
-const inventoryFilePath = require ('../../data/inventories.json')
-
-const readInventoryData = () => {
-    const inventoryData  = fs.readFileSync('./data/inventories.json')
-    return JSON.parse(inventoryData)
-=======
 const inventoryFilePath = "./data/inventories.json"
 const putInventoryFilePath = require("../../data/inventories.json")
 
@@ -19,28 +12,12 @@ const readInventoryData = () => {
     const inventoryData = fs.readFileSync(inventoryFilePath)
     const parsedInventoryFile = JSON.parse(inventoryData)
     return parsedInventoryFile
->>>>>>> develop
 };
 //axios get
 router.get('/', (req, res) => {
     try {
         const parsedInventory = readInventoryData();
         return res.status(200).json(parsedInventory)
-<<<<<<< HEAD
-    } catch(err) {
-        return res.status(500).json({ error: 'item cannnot found' })
-    }
-});
-router.get('/:itemId', (req, res) => {
-    const itemId = req.params.itemId
-    const filteredInventory = inventoryFilePath.filter((inventory) => inventory.id === itemId);
-    if(!filteredInventory) { 
-        return res.status(404).json(filteredInventory).send('Inventory cannot be found')
-    } 
-    res.json(filteredInventory)
-}); 
-
-=======
     } catch (err) {
         return res.status(500).json({ error: 'item not found' })
     }
@@ -91,7 +68,6 @@ router.put('/:itemId/edit', (req, res) => {
 })
 
 
->>>>>>> develop
 router.delete('/:itemId', (req, res) => {
     console.log(req.params.itemId);
     const parsedInventory = readInventoryData();

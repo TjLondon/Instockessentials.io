@@ -10,6 +10,7 @@ class Inventory extends Component {
     componentDidMount() {
         instockRequests.getWarehouseInventories()
         .then((response)  => {
+            console.log(response.data)
             this.setState({
                 inventories: response.data[0],
             })
