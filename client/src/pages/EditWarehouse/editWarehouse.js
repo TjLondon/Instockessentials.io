@@ -296,8 +296,4 @@ function EditWarehouse({ history, component }) {
         </>
     );
 }
-
-
-
-
 export default EditWarehouse

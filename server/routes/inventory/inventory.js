@@ -13,9 +13,8 @@ const readInventoryData = () => {
     const parsedInventoryFile = JSON.parse(inventoryData)
     return parsedInventoryFile
 };
-
 //axios get
-router.get('/', (_req, res) => {
+router.get('/', (req, res) => {
     try {
         const parsedInventory = readInventoryData();
         return res.status(200).json(parsedInventory)
@@ -30,12 +29,6 @@ router.get('/:itemId', (req, res) => {
     if (!findInventory) {
         return res.status(404).json(findInventory).send('Inventory cannot be found')
     }
-    console.log('PARSED INVENTORY:: ', parsedInventory)
-    console.log('FIND INVENTORY ::', findInventory)
-    console.log('FIND INVENTORY ID ::', inventory.id)
-    console.log('PARAMS ID:: ', req.params.itemId)
-
-
     res.json(findInventory)
 });
 

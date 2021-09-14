@@ -1,0 +1,9 @@
+@import '../../Styles/partials/variables';
+@import '../../Styles/partials/typography';
+@import '../../Styles/partials/mixins';
+
+.inventories {
+    border: 1px solid black;
+    width: 100%;
+    height: 10rem;
+}

@@ -1,4 +1,8 @@
 @import './variables'; 
+@import './typography';
+@import './variables'; 
+
+
 @mixin resets {
     *,
     *:before,
@@ -59,7 +63,7 @@
 @mixin mobile-h4-table-header{
     font-size: $mobile-h4-tableheader-font;
     line-height: $mobile-h4-tableheader-lineh;
-    font-weight: 400;
+    font-weight: 600;
 }
 @mixin mobile-large-font{
     font-size: $mobile-p1-bodylarge-font;

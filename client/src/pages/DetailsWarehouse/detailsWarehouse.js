@@ -9,7 +9,6 @@ class Warehouse extends Component {
         warehouses: [],
         selectedWarehouse: []
     }
-
     getSingleWarehouse = (id) => {
         instockRequests.getSingleWarehouse(id).then(response => {
             this.setState({
@@ -18,7 +17,6 @@ class Warehouse extends Component {
         })
             .catch(error => console.log(error))
     }
-
     componentDidMount() {
         instockRequests.getAllWarehouses().then(response => {
             this.setState({
@@ -28,7 +26,6 @@ class Warehouse extends Component {
             this.getSingleWarehouse(id)
         }).catch(error => console.log(error))
     }
-
     render() {
         return (
             <div className='details'>

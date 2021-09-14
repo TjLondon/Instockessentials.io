@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
-import "./AddWarehouse.scss";
+import './AddWarehouse.scss';
 import { Formik, Form, Field } from "formik";
 
 function validateEmail(value) {
@@ -20,8 +20,6 @@ function validateWarehouse(value) {
   let error;
   if (!value) {
     error = "this field is required";
-
-
   }
   return error;
 }
@@ -29,7 +27,6 @@ function validateStreet(value) {
   let error;
   if (!value) {
     error = "this field is required";
-
   }
   return error;
 }
@@ -37,7 +34,6 @@ function validateCity(value) {
   let error;
   if (!value) {
     error = "this field is required";
-
   }
   return error;
 }
