@@ -1,6 +1,6 @@
 //BreakPoints
-$tablet-breakpoint: 1280px;
-$desktop-breakpoint: 767px;
+$tablet-breakpoint: 767px;
+$desktop-breakpoint: 1280px ;
 
 //Colors Platetter
 //primary
@@ -18,13 +18,58 @@ $green: #158463; //in-stock label
 $red: #c94515; //out of stock label, error states, & delete icon
 
 //padding 
-$pad80: 80px; 
-$pad64: 64px;
-$pad56: 56px;
-$pad48: 48px;
-$pad40: 40px;
-$pad32: 32px;
-$pad24: 24px;
-$pad16: 16px;
-$pad8: 8px;
-$pad4: 4px;
+$pad80: 5rem; 
+$pad64: 4rem;
+$pad56: 3.5rem;
+$pad48: 3rem;
+$pad40: 2.5rem;
+$pad32: 2rem;
+$pad24: 1.5rem;
+$pad16: 1rem;
+$pad8: .5rem;
+$pad4: .25rem;
+
+//Text Styles
+//header
+$mobile-h1-header-font: 1.75rem;
+$mobile-h1-header-lineh: 2.25rem;
+//subheader
+$mobile-h2-subheader-font: 1.25rem;
+$mobile-h2-subheader-lineh: 1.75rem;
+//labels, links, buttons
+$mobile-h3-lablinkbtns-font: .813rem;
+$mobile-h3-lablinkbtns-lineh: 1.25rem;
+//tablet headear
+$mobile-h4-tableheader-font: .688rem;
+$mobile-h4-tableheader-lineh: 1rem;
+//body large
+$mobile-p1-bodylarge-font: .938rem;
+$mobile-p1-bodylarge-lineh: 1.625rem;
+//body medium
+$mobile-p2-bodymedium-font: 0.813rem;
+$mobile-p2-bodymedium-lineh: 1.25rem;
+//bodu small
+$mobile-p3-bodysmall-font: 0.688rem;
+$mobile-p3-bodysmall-lineh: 1rem;
+
+//header
+$desktop-h1-header-font: 2rem;
+$desktop-h1-header-lineh: 2.5rem;
+//subheader
+$desktop-h2-subheader-font: 1.5rem; 
+$desktop-h2-subheader-lineh: 2rem; 
+//labels, links, buttons
+$desktop-h3-lablinkbtns-font: .875rem; 
+$desktop-h3-lablinkbtns-lineh: 1.375rem; 
+//tablet header
+$desktop-h4-tableheader-font: 0.75rem; 
+$desktop-h4-tableheader-lineh: 1.125rem; 
+//parargrapyh body large
+$desktop-p1-bodylarge-font: 1rem; 
+$desktop-p1-bodylarge-lineh: 1.75rem; 
+//paragraph body medium 
+$desktop-p2-bodymedium-font: 0.875rem; 
+$desktop-p2-bodymedium-lineh: 1.375rem; 
+//paragraphy body small
+$desktop-p3-bodysmall-font: 0.75rem; 
+$desktop-p3-bodysmall-lineh: 1.125rem; 

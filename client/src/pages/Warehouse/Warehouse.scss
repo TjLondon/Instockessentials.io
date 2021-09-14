@@ -1,0 +1,77 @@
+@use '../../Styles/partials/mixins' as *;
+
+.warehouses {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    background-color: $white;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    border-radius: 3px;
+    position: relative;
+    top: -4.5rem;
+
+    @include tablet {
+        margin: 2rem;
+    // top: -5.75rem;
+    }
+    
+    @include desktop {
+        margin: 2rem 8.125rem 2rem 8.125rem;
+    }
+
+    &__header {
+        margin: 1rem;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            height: 5.875rem;
+        }
+       
+    }
+    
+    &__title {
+        @include mobile-h1-pageheader;
+        margin-bottom: 1rem;
+
+        @include tablet {
+            margin: 0;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+            align-items: center;
+        }
+      
+    }
+
+    &__button {
+        @include button;
+        width: 100%;
+        display: flex;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+
+        @include tablet {
+            margin: 0;
+            margin-left: 1rem;
+            width: 11.5rem;
+        }
+    }
+
+    &__search {
+        @include tablet {
+            margin: 0;
+            width: 11.5rem;
+        }
+    }
+
+
+}
