@@ -10,7 +10,7 @@ const WarehouseListItem = ({ warehouses, warehouseModal }) => {
                     <div className='item__category-container'>
                         <h5 className='item__category'>WAREHOUSES</h5>
                         <div className='item__link item__content'>
-                            <Link to={`/${warehouses.id}/inventory`} >{warehouses.name}</Link>
+                            <Link to={`/${warehouses.id}`} >{warehouses.name}</Link>
                             <img src='http://localhost:8080/Assets/Icons/chevron_right-24px.svg' alt='arrow' />
                         </div>
                     </div>
@@ -42,7 +42,9 @@ const WarehouseListItem = ({ warehouses, warehouseModal }) => {
                 <h5 className='item__category item__category--actions'>ACTIONS</h5>
                 <div className='item__icons'>
                     <img className='item__icon' src='http://localhost:8080/Assets/Icons/delete_outline-24px.svg' alt='delete button' onClick={() => warehouseModal(warehouses)} />
-                    <img className='item__icon' src='http://localhost:8080/Assets/Icons/edit-24px.svg' alt='edit button' />
+                    <Link to={`${warehouses.id}/edit`}>
+                        <img className='item__icon' src='http://localhost:8080/Assets/Icons/edit-24px.svg' alt='edit button' />
+                    </Link>
                 </div>
             </div>
         </li>
